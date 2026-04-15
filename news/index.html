@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta | News</title>
   <meta name="description" content="News and updates — Anshu Gupta, PhD student at UC San Diego">
@@ -148,9 +149,6 @@
 <div class="container mt-5 pt-4" style="max-width:860px;">
   <div class="pt-3 mb-3">
     <h1 class="page-title">News</h1>
-    <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">
-      Updates on talks, publications, awards, and milestones.
-    </p>
   </div>
 
   <!-- Category filters -->
@@ -166,27 +164,51 @@
   <!-- ── 2026 ── -->
   <div class="section-title">2026</div>
 
-  <div class="news-card" data-cat="talk">
+  <div class="news-card" data-cat="pub talk">
     <div class="news-photo-col">
-      <img src="/assets/img/dp_hls_logo.png" alt="DP-HLS at HPCA 2026"
+      <img src="/assets/img/dp_hls_logo.png" alt="DP-HLS"
            onerror="this.parentElement.classList.add('hidden')">
     </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Feb 2026</span>
         <span class="cat-badge cat-talk">Talk</span>
+        <span class="cat-badge cat-pub">Publication</span>
       </div>
-      <div class="news-headline">Presented DP-HLS at IEEE HPCA 2026, Sydney, Australia</div>
       <div class="news-body">
-        Gave a talk on <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics</a>
-        at <a href="https://hpca-conf.org/2026/" target="_blank">IEEE HPCA 2026</a> in Sydney, Australia.
-        HPCA is one of the premier conferences in computer architecture, with an acceptance rate of ~18–21% in recent years (~75 accepted out of 410 submissions in 2024).
+        Presented and published <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">DP-HLS</a> at <a href="https://hpca-conf.org/2026/" target="_blank">IEEE HPCA 2026</a>, Sydney, Australia.
+      </div>
+    </div>
+  </div>
+
+  <div class="news-card" data-cat="talk">
+    <div class="news-photo-col hidden"></div>
+    <div class="news-content-col">
+      <div class="news-top">
+        <span class="news-date-pill">Apr 2026</span>
+        <span class="cat-badge cat-talk">Poster</span>
+      </div>
+      <div class="news-body">
+        Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2026</a>.
       </div>
     </div>
   </div>
 
   <!-- ── 2025 ── -->
   <div class="section-title">2025</div>
+
+  <div class="news-card" data-cat="service">
+    <div class="news-photo-col hidden"></div>
+    <div class="news-content-col">
+      <div class="news-top">
+        <span class="news-date-pill">2025</span>
+        <span class="cat-badge cat-service">Service</span>
+      </div>
+      <div class="news-body">
+        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>.
+      </div>
+    </div>
+  </div>
 
   <div class="news-card" data-cat="intern">
     <div class="news-photo-col hidden"></div>
@@ -195,10 +217,8 @@
         <span class="news-date-pill">Jun 2025</span>
         <span class="cat-badge cat-intern">Internship</span>
       </div>
-      <div class="news-headline">Research Internship at AMD Research &amp; Advanced Development (RAD)</div>
       <div class="news-body">
-        Started a summer research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research &amp; Advanced Development</a>,
-        San Jose, CA. Working with the AMD Omics Group on hardware acceleration of bioinformatics workloads.
+        Started research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research &amp; Advanced Development</a>, San Jose, CA.
       </div>
     </div>
   </div>
@@ -210,16 +230,8 @@
         <span class="news-date-pill">May 2025</span>
         <span class="cat-badge cat-pub">Publication</span>
       </div>
-      <div class="news-headline">ROADIES published in PNAS and selected as Journal Cover</div>
       <div class="news-body">
-        <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> was published in
-        <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank"><em>Proceedings of the National Academy of Sciences</em></a>
-        (Vol. 122, No. 19) and selected as the <strong>cover article</strong>.
-        PNAS is one of the world's most prestigious multidisciplinary journals (Impact Factor 9.1; ~15% acceptance rate;
-        second most-cited scientific journal globally).
-        Featured in the <a href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">UCSD Today newsletter</a>
-        and highlighted across multiple scientific news platforms.
-        See also: <a href="/press/">Press &amp; Media Coverage</a>.
+        <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> published in <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank">PNAS</a> (Vol. 122, No. 19) and selected as the journal cover; covered by <a href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">UCSD Today</a> and multiple science outlets.
       </div>
     </div>
   </div>
@@ -229,7 +241,7 @@
 
   <div class="news-card" data-cat="talk">
     <div class="news-photo-col">
-      <img src="/assets/img/roadies_ismb.jpg" alt="ROADIES talk at ISMB 2024"
+      <img src="/assets/img/roadies_ismb.jpg" alt="ISMB 2024"
            onerror="this.parentElement.classList.add('hidden')">
     </div>
     <div class="news-content-col">
@@ -237,17 +249,15 @@
         <span class="news-date-pill">Jul 2024</span>
         <span class="cat-badge cat-talk">Talk</span>
       </div>
-      <div class="news-headline">Presented ROADIES at ISMB 2024, Montreal</div>
       <div class="news-body">
-        Gave a talk on <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES: Automated Species Tree Inference from Raw Genome Assemblies</a>
-        at <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a> in Montreal, Canada — one of the flagship conferences in computational biology.
+        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> at <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a>, Montreal, Canada.
       </div>
     </div>
   </div>
 
   <div class="news-card" data-cat="award">
     <div class="news-photo-col">
-      <img src="/assets/img/biosys_group_photo.jpg" alt="BioSys Workshop at ASPLOS 2024"
+      <img src="/assets/img/biosys_group_photo.jpg" alt="BioSys Workshop ASPLOS 2024"
            onerror="this.parentElement.classList.add('hidden')">
     </div>
     <div class="news-content-col">
@@ -255,19 +265,15 @@
         <span class="news-date-pill">Apr 2024</span>
         <span class="cat-badge cat-award">Award</span>
       </div>
-      <div class="news-headline">ASPLOS 2024 Travel Grant &amp; BioSys Workshop Co-organizer</div>
       <div class="news-body">
-        Awarded the <strong>ASPLOS 2024 Travel Grant</strong>. Co-organized the inaugural
-        <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a>
-        at <a href="https://www.asplos-conference.org/" target="_blank">ASPLOS 2024</a>, San Diego, CA —
-        bringing together researchers in systems architecture and computational biology.
+        Received ASPLOS 2024 Travel Grant and co-organized the inaugural <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a> at ASPLOS 2024, San Diego.
       </div>
     </div>
   </div>
 
   <div class="news-card" data-cat="talk">
     <div class="news-photo-col">
-      <img src="/assets/img/roadies_research_expo.jpeg" alt="ROADIES poster at Research Expo 2024"
+      <img src="/assets/img/roadies_research_expo.jpeg" alt="Research Expo 2024"
            onerror="this.parentElement.classList.add('hidden')">
     </div>
     <div class="news-content-col">
@@ -275,10 +281,8 @@
         <span class="news-date-pill">Apr 2024</span>
         <span class="cat-badge cat-talk">Poster</span>
       </div>
-      <div class="news-headline">ROADIES poster at UC San Diego Research Expo 2024</div>
       <div class="news-body">
-        Presented a poster on <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>
-        at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2024</a>, La Jolla, CA.
+        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2024</a>.
       </div>
     </div>
   </div>
@@ -290,10 +294,8 @@
         <span class="news-date-pill">Mar 2024</span>
         <span class="cat-badge cat-service">Service</span>
       </div>
-      <div class="news-headline">Artifact Evaluation Committee — ISCA 2024</div>
       <div class="news-body">
-        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>,
-        one of the flagship conferences in computer architecture.
+        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.
       </div>
     </div>
   </div>
@@ -311,10 +313,8 @@
         <span class="news-date-pill">Jun–Sep 2023</span>
         <span class="cat-badge cat-intern">Internship</span>
       </div>
-      <div class="news-headline">Summer Internship at Analog Devices, Inc. — Wilmington, MA</div>
       <div class="news-body">
-        Completed a 3-month summer internship at <a href="https://www.analog.com/" target="_blank">Analog Devices, Inc.</a>,
-        Wilmington, MA, working on digital hardware design — returning to a company where I previously worked for 3+ years as a full-time engineer.
+        Completed summer internship at <a href="https://www.analog.com/" target="_blank">Analog Devices, Inc.</a>, Wilmington, MA.
       </div>
     </div>
   </div>
@@ -329,12 +329,8 @@
         <span class="news-date-pill">Nov 2022</span>
         <span class="cat-badge cat-intern">Milestone</span>
       </div>
-      <div class="news-headline">Joined Turakhia Lab as PhD Student at UC San Diego</div>
       <div class="news-body">
-        Began my PhD in Computer Science and Engineering at
-        <a href="https://ucsd.edu/" target="_blank">UC San Diego</a>,
-        joining the <a href="https://turakhia.ucsd.edu/" target="_blank">Turakhia Lab</a>
-        and subsequently the <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Mirarab Lab</a>.
+        Joined <a href="https://turakhia.ucsd.edu/" target="_blank">Turakhia Lab</a> as a PhD student at UC San Diego.
       </div>
     </div>
   </div>
@@ -359,7 +355,7 @@
     upd();$(document).on('scroll',upd);
     $(window).on('resize',function(){navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);upd();});
 
-    /* Category filter */
+    /* Category filter — supports space-separated multi-category data-cat values */
     $('.filter-btn').on('click', function(){
       $('.filter-btn').removeClass('active');
       $(this).addClass('active');
@@ -369,7 +365,8 @@
         $('.section-title').show();
       } else {
         $('.news-card').each(function(){
-          $(this).toggle($(this).data('cat') === f);
+          var cats = ($(this).data('cat') || '').split(' ');
+          $(this).toggle(cats.indexOf(f) !== -1);
         });
         /* hide year headers with no visible cards */
         $('.section-title').each(function(){

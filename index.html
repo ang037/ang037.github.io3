@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta</title>
   <meta name="description" content="Anshu Gupta — PhD student in CSE at UC San Diego">
@@ -194,7 +195,7 @@
   <!-- Profile -->
   <div class="row align-items-center pt-3 mb-4">
     <div class="col-md-3 text-center mb-3 mb-md-0">
-      <img class="profile-img" src="assets/img/prof_pic.jpg" alt="Anshu Gupta">
+      <img class="profile-img" src="assets/img/prof_pic.png" alt="Anshu Gupta">
     </div>
     <div class="col-md-9">
       <h1 class="profile-name">Anshu Gupta</h1>
@@ -246,18 +247,6 @@
   <div class="section-title" style="display:flex;align-items:center;justify-content:space-between;">
     <span>Press &amp; Media Coverage</span>
     <a href="/press/" style="font-size:0.75rem;font-weight:500;letter-spacing:0;text-transform:none;">Full coverage &rarr;</a>
-  </div>
-
-  <div class="pnas-block">
-    <img class="pnas-cover-img" src="assets/img/pnas_cover.jpg" alt="PNAS Cover May 2025"
-         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-    <div class="pnas-placeholder" style="display:none;">PNAS<br>Cover<br>May 2025</div>
-    <div class="pnas-text">
-      <strong>PNAS Journal Cover</strong> — May 13, 2025, Vol.&nbsp;122, No.&nbsp;19<br>
-      <a href="https://doi.org/10.1073/pnas.2500553122" target="_blank">"Accurate, scalable, and fully automated inference of species trees from raw genome assemblies using ROADIES"</a>
-      selected as the cover article of <em>Proceedings of the National Academy of Sciences</em> and
-      featured across multiple scientific news platforms.
-    </div>
   </div>
 
   <div class="press-row">
@@ -316,6 +305,20 @@
     <div class="talk-text">
       <strong>ROADIES: Automated Species Tree Inference from Raw Genome Assemblies</strong><br>
       <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a> — Montreal, Canada, Jul 2024.
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-badge badge-poster">Poster</span>
+    <div class="talk-text">
+      <strong>DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics</strong><br>
+      <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2026</a> — La Jolla, CA, Apr 2026.
+    </div>
+  </div>
+  <div class="talk-item">
+    <span class="talk-badge badge-talk">Lecture</span>
+    <div class="talk-text">
+      <strong>Guest Lecture — ECE 218</strong><br>
+      UC San Diego — Mar 2026.
     </div>
   </div>
   <div class="talk-item">
@@ -382,10 +385,22 @@
   </div>
 
   <div class="news-item">
+    <span class="news-date">Apr 2026</span>
+    <span class="news-text">
+      Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a> poster at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank"><strong>UC San Diego Research Expo 2026</strong></a>.
+    </span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Mar 2026</span>
+    <span class="news-text">
+      Delivered a guest lecture for <strong>ECE 218</strong> at UC San Diego.
+    </span>
+  </div>
+  <div class="news-item">
     <span class="news-date">Feb 2026</span>
     <span class="news-text">
-      Presented <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">DP-HLS</a>
-      at <strong>IEEE HPCA 2026</strong> in Sydney, Australia.
+      Presented and published <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">DP-HLS</a>
+      at <strong>IEEE HPCA 2026</strong>, Sydney, Australia.
     </span>
   </div>
   <div class="news-item">
@@ -421,6 +436,12 @@
     <span class="news-text">
       Presented poster on <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>
       at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank"><strong>UC San Diego Research Expo 2024</strong></a>.
+    </span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">2025</span>
+    <span class="news-text">
+      Served on Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank"><strong>ISCA 2025</strong></a>.
     </span>
   </div>
   <div class="news-item">

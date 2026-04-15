@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta | Press &amp; Media</title>
   <meta name="description" content="Press and media coverage — Anshu Gupta, PhD student at UC San Diego">
@@ -161,43 +162,32 @@
 <div class="container mt-5 pt-4" style="max-width:860px;">
   <div class="pt-3 mb-3">
     <h1 class="page-title">Press &amp; Media Coverage</h1>
-    <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">
-      Media coverage of my research, primarily around the ROADIES paper published in PNAS.
-    </p>
-  </div>
-
-  <!-- Context -->
-  <div class="section-title">About the Coverage</div>
-  <div class="context-box">
-    The media coverage below was triggered by the publication of
-    <strong><a href="https://doi.org/10.1073/pnas.2500553122" target="_blank">"Accurate, scalable, and fully automated inference of species trees from raw genome assemblies using ROADIES"</a></strong>
-    in <em>Proceedings of the National Academy of Sciences</em> (PNAS) — selected as the
-    <strong>journal cover article</strong> of Vol. 122, No. 19, May 13, 2025.
-    PNAS has an acceptance rate of ~15% and is the second most-cited scientific journal in the world
-    (Impact Factor: 9.1).
-  </div>
-
-  <!-- PNAS Cover highlight -->
-  <div class="section-title">Journal Cover</div>
-
-  <div class="pnas-card">
-    <img class="pnas-cover" src="/assets/img/pnas_cover.jpg" alt="PNAS Cover May 2025"
-         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-    <div class="pnas-placeholder" style="display:none;">PNAS<br>Cover<br>May 2025<br>Vol.122<br>No.19</div>
-    <div class="pnas-text">
-      <strong>PNAS Journal Cover — May 13, 2025</strong><br>
-      Vol. 122, No. 19 — <em>Proceedings of the National Academy of Sciences</em><br><br>
-      ROADIES was selected as the cover article for this issue — an honor reflecting the editorial board's
-      assessment of the paper's significance and broad scientific impact. The cover image visualizes
-      species tree inference across the tree of life.<br><br>
-      <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank" class="press-read-link">
-        <i class="fas fa-external-link-alt"></i> View issue cover
-      </a>
-    </div>
   </div>
 
   <!-- Press articles -->
   <div class="section-title">News Articles &amp; Features</div>
+
+  <!-- PNAS Cover -->
+  <div class="press-card">
+    <div class="press-thumb">
+      <img src="/assets/img/pnas_cover.jpg" alt="PNAS Cover May 2025"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <i class="fas fa-book-open press-icon-fallback" style="display:none;"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">PNAS — Proceedings of the National Academy of Sciences</span>
+        <span class="press-date">May 2025</span>
+      </div>
+      <div class="press-headline">Journal Cover — Vol. 122, No. 19, May 13, 2025</div>
+      <div class="press-excerpt">
+        ROADIES was selected as the cover article, reflecting the editorial board's assessment of the paper's significance and broad scientific impact.
+      </div>
+      <a class="press-read-link" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">
+        <i class="fas fa-external-link-alt"></i> View issue cover
+      </a>
+    </div>
+  </div>
 
   <!-- UCSD Today -->
   <div class="press-card">
@@ -290,13 +280,6 @@
     </div>
   </div>
 
-  <!-- Photo tip -->
-  <div style="margin-top:1.5rem; padding:12px 16px; background:var(--accent-light); border:1px solid var(--accent-border); border-radius:8px; font-size:0.82rem; color:var(--entry-sub);">
-    <i class="fas fa-info-circle" style="color:var(--accent);"></i>
-    &nbsp;To add screenshots of articles: drop images into <code>/assets/img/press/</code>
-    and update the <code>src</code> attributes in the press cards (e.g., <code>assets/img/press/scienmag.jpg</code>).
-    Cards automatically resize and hide the placeholder icon when an image loads.
-  </div>
 
 </div><!-- /container -->
 
