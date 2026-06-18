@@ -5,7 +5,7 @@
   <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta</title>
-  <meta name="description" content="Anshu Gupta — PhD student in CSE at UC San Diego">
+  <meta name="description" content="Anshu Gupta — PhD Candidate in CSE at UC San Diego">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/all.min.css">
@@ -58,13 +58,13 @@
     /* ══ PROGRESS BAR ══ */
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
-    #progress::-webkit-progress-value { background: var(--accent); }
-    #progress::-moz-progress-bar { background: var(--accent); }
+    #progress::-webkit-progress-value { background: var(--border); }
+    #progress::-moz-progress-bar { background: var(--border); }
 
     /* ══ SECTION TITLE ══ */
     .section-title {
       font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1.5px; color: var(--accent);
+      letter-spacing: 1.5px; color: var(--text-muted);
       border-bottom: 1px solid var(--border);
       padding-bottom: 6px; margin-bottom: 1.2rem; margin-top: 2.5rem;
     }
@@ -88,9 +88,9 @@
       color: var(--text); text-decoration: none; transition: border-color 0.15s;
     }
     .stat-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
-    .stat-chip i { color: var(--accent); }
-    .stat-chip.conda i { color: var(--green); }
-    .stat-chip.pnas i { color: var(--amber); }
+    .stat-chip i { color: var(--text-muted); }
+    .stat-chip.conda i { color: var(--text-muted); }
+    .stat-chip.pnas i { color: var(--text-muted); }
 
     /* PNAS cover block */
     .pnas-block {
@@ -114,29 +114,29 @@
     .press-chip {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.8rem; font-weight: 500;
-      background: var(--accent-light); border: 1px solid var(--accent-border);
-      border-radius: 5px; padding: 4px 11px; color: var(--accent);
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 5px; padding: 4px 11px; color: var(--text-muted);
       text-decoration: none; transition: background 0.15s;
     }
-    .press-chip:hover { background: var(--accent-border); color: var(--accent); text-decoration: none; }
+    .press-chip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
     /* ══ AWARDS ══ */
     .award-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.85rem; }
-    .award-icon { width: 30px; height: 30px; background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; color: var(--amber); margin-top: 1px; }
+    .award-icon { width: 30px; height: 30px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; color: var(--text-muted); margin-top: 1px; }
     .award-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
     .award-text strong { color: var(--text); }
 
     /* ══ TALKS ══ */
     .talk-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.9rem; }
     .talk-badge { font-size: 0.7rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; margin-top: 3px; white-space: nowrap; flex-shrink: 0; }
-    .badge-talk   { background: var(--red-light); color: var(--red); border: 1px solid var(--red-border); }
-    .badge-poster { background: var(--amber-light); color: var(--amber); border: 1px solid var(--amber-border); }
+    .badge-talk   { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
+    .badge-poster { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
     .talk-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
     .talk-text strong { color: var(--text); }
 
     /* ══ SERVICE ══ */
     .service-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.7rem; }
-    .service-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .service-dot { width: 7px; height: 7px; background: var(--text-muted); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
     .service-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
 
     /* ══ COLLABORATIONS ══ */
@@ -149,11 +149,11 @@
       text-decoration: none; transition: border-color 0.15s;
     }
     .collab-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
-    .collab-chip i { color: var(--accent); font-size: 0.85rem; }
+    .collab-chip i { color: var(--text-muted); font-size: 0.85rem; }
 
     /* ══ NEWS ══ */
     .news-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 0.85rem; }
-    .news-date { min-width: 86px; font-size: 0.73rem; font-weight: 600; color: #fff; background: var(--accent); border-radius: 4px; padding: 2px 7px; text-align: center; margin-top: 3px; white-space: nowrap; flex-shrink: 0; }
+    .news-date { min-width: 86px; font-size: 0.73rem; font-weight: 600; color: var(--text-muted); background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; padding: 2px 7px; text-align: center; margin-top: 3px; white-space: nowrap; flex-shrink: 0; }
     .news-text { font-size: 0.9rem; color: var(--entry-sub); line-height: 1.6; }
 
     /* ══ FOOTER ══ */
@@ -200,7 +200,7 @@
     <div class="col-md-9">
       <h1 class="profile-name">Anshu Gupta</h1>
       <div class="profile-title">
-        PhD Student, Computer Science &amp; Engineering<br>
+        PhD Candidate, Computer Science &amp; Engineering<br>
         <a href="https://ucsd.edu/" target="_blank" style="font-weight:500;">University of California San Diego</a>
       </div>
       <div class="profile-links">
@@ -215,30 +215,37 @@
   <!-- Bio -->
   <div class="bio-text">
     <p>
-      I am a 4th-year PhD student in Computer Science and Engineering at the
-      <a href="https://ucsd.edu/" target="_blank"><strong>University of California San Diego</strong></a>,
-      advised by <a href="https://turakhia.ucsd.edu/" target="_blank"><strong>Prof. Yatish Turakhia</strong></a>
-      and <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank"><strong>Prof. Siavash Mirarab</strong></a>.
+      I am a 4th-year PhD candidate in Computer Science and Engineering at the
+      <a href="https://ucsd.edu/" target="_blank">University of California San Diego</a>,
+      advised by <a href="https://turakhia.ucsd.edu/" target="_blank">Prof. Yatish Turakhia</a>.
     </p>
     <p>
       My research bridges <strong>computer architecture</strong>, <strong>machine learning systems</strong>,
-      and <strong>computational biology</strong>. I build hardware/software co-designed tools that make
-      large-scale genomic analyses fast and accessible — spanning FPGA-based accelerators for dynamic
-      programming and ML kernels to fully automated phylogenomic pipelines driven by deep learning-friendly
-      frameworks. My work is grounded in real hardware (I have a tape-out to my name from my industry years)
-      and aimed at scientific impact: my tools are actively used by researchers worldwide.
+      and <strong>computational biology</strong>, with the broader goal of making large-scale genomic analysis
+      fast, scalable, and accessible. I build hardware/software co-designed systems - that go from algorithm
+      design down to RTL and silicon — spanning FPGA-based accelerators for dynamic programming-based sequence
+      alignment to a fully automated, GPU/CPU-parallelized workflow for phylogenomic tree inference. These
+      tools are open-sourced and being used by research groups worldwide, with publications at leading venues (PNAS, HPCA).
     </p>
     <p>
-      I collaborate with the <a href="https://vertebrategenomesproject.org/" target="_blank"><strong>Vertebrate Genomes Project (VGP)</strong></a>
-      consortium, researchers at the <a href="https://scripps.ucsd.edu/" target="_blank"><strong>Scripps Institution of Oceanography, UCSD</strong></a>,
+      I collaborate with the <a href="https://vertebrategenomesproject.org/" target="_blank">Vertebrate Genomes Project (VGP)</a>
+      consortium, researchers at the <a href="https://scripps.ucsd.edu/" target="_blank">Scripps Institution of Oceanography, UCSD</a>,
       and the <strong>AMD Omics Group</strong> on accelerating bioinformatics workloads at scale.
     </p>
     <p>
-      I received my M.S. in Computer Engineering from UC San Diego (GPA: 4.0) and my B.Tech. from
-      <a href="https://www.iiests.ac.in/" target="_blank"><strong>IIEST Shibpur, India</strong></a>
-      (GPA: 9.55/10, Rank: 4). Before my PhD, I spent 3+ years as a Digital Design Engineer at
-      <a href="https://www.analog.com/" target="_blank"><strong>Analog Devices</strong></a>.
-      I was also a <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank"><strong>DAAD WISE Scholar</strong></a>
+      Beyond research, I serve the community as a member of the Artifact Evaluation Committee
+      for <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a> and
+      <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>, as a reviewer for
+      <a href="https://academic.oup.com/bioinformatics" target="_blank"><em>Bioinformatics</em> (Oxford Academic)</a>,
+      and as co-organizer of the <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a>
+      at <a href="https://www.asplos-conference.org/" target="_blank">ASPLOS 2024</a>.
+    </p>
+    <p>
+      I received my M.S. in Computer Engineering from UC San Diego and my B.Tech. from
+      <a href="https://www.iiests.ac.in/" target="_blank">IIEST Shibpur, India</a>. Before my PhD, I spent 3+ years as a Digital Design Engineer at
+      <a href="https://www.analog.com/" target="_blank">Analog Devices</a>. During my PhD, I interned at
+      <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research</a>.
+      I was also a <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank">DAAD WISE Scholar</a>
       at the <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen, Germany</a>.
     </p>
   </div>
@@ -267,81 +274,19 @@
     </a>
   </div>
 
-  <!-- ══ AWARDS ══ -->
-  <div class="section-title">Awards &amp; Honors</div>
-
-  <div class="award-item">
-    <div class="award-icon"><i class="fas fa-book-open"></i></div>
-    <div class="award-text">
-      <strong>PNAS Journal Cover</strong> — Cover article of <em>PNAS</em> Vol.&nbsp;122, No.&nbsp;19, May 13, 2025.
-    </div>
-  </div>
-  <div class="award-item">
-    <div class="award-icon"><i class="fas fa-plane"></i></div>
-    <div class="award-text">
-      <strong>ASPLOS 2024 Travel Grant</strong> — awarded to attend ACM ASPLOS, San Diego, CA, Apr 2024.
-    </div>
-  </div>
-  <div class="award-item">
-    <div class="award-icon"><i class="fas fa-medal"></i></div>
-    <div class="award-text">
-      <strong><a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank">DAAD WISE Scholarship</a></strong>
-      — German Academic Exchange Service scholarship for summer research at the <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen, Germany</a>, 2018.
-    </div>
-  </div>
-
-  <!-- ══ TALKS ══ -->
-  <div class="section-title">Talks &amp; Presentations</div>
-
-  <div class="talk-item">
-    <span class="talk-badge badge-talk">Talk</span>
-    <div class="talk-text">
-      <strong>DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics</strong><br>
-      <a href="https://hpca-conf.org/2026/" target="_blank">IEEE HPCA 2026</a> — Sydney, Australia, Feb 2026.
-    </div>
-  </div>
-  <div class="talk-item">
-    <span class="talk-badge badge-talk">Talk</span>
-    <div class="talk-text">
-      <strong>ROADIES: Automated Species Tree Inference from Raw Genome Assemblies</strong><br>
-      <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a> — Montreal, Canada, Jul 2024.
-    </div>
-  </div>
-  <div class="talk-item">
-    <span class="talk-badge badge-poster">Poster</span>
-    <div class="talk-text">
-      <strong>DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics</strong><br>
-      <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2026</a> — La Jolla, CA, Apr 2026.
-    </div>
-  </div>
-  <div class="talk-item">
-    <span class="talk-badge badge-talk">Lecture</span>
-    <div class="talk-text">
-      <strong>Guest Lecture — ECE 218</strong><br>
-      UC San Diego — Mar 2026.
-    </div>
-  </div>
-  <div class="talk-item">
-    <span class="talk-badge badge-poster">Poster</span>
-    <div class="talk-text">
-      <strong>ROADIES: Automated Species Tree Inference from Raw Genome Assemblies</strong><br>
-      <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2024</a> — La Jolla, CA, Apr 2024.
-    </div>
-  </div>
-
   <!-- ══ SERVICE ══ -->
   <div class="section-title">Service</div>
 
   <div class="service-item">
     <div class="service-dot"></div>
     <div class="service-text">
-      <strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>.
+      <strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>, <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.
     </div>
   </div>
   <div class="service-item">
     <div class="service-dot"></div>
     <div class="service-text">
-      <strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank">Bioinformatics</a> (Oxford Academic).
+      <strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank">Bioinformatics</a> (Oxford Academic), <a href="http://recomb.org/recomb2026/" target="_blank">RECOMB 2026</a>.
     </div>
   </div>
   <div class="service-item">
@@ -351,15 +296,9 @@
       @ <a href="https://www.asplos-conference.org/" target="_blank">ASPLOS 2024</a> — San Diego, CA.
     </div>
   </div>
-  <div class="service-item">
-    <div class="service-dot"></div>
-    <div class="service-text">
-      <strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.
-    </div>
-  </div>
 
   <!-- ══ COLLABORATIONS ══ -->
-  <div class="section-title">Collaborations</div>
+  <div class="section-title">Collaborations and Affiliations</div>
   <div class="collab-grid">
     <a class="collab-chip" href="https://vertebrategenomesproject.org/" target="_blank">
       <i class="fas fa-dna"></i> Vertebrate Genomes Project (VGP)
@@ -387,7 +326,15 @@
   <div class="news-item">
     <span class="news-date">Apr 2026</span>
     <span class="news-text">
-      Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a> poster at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank"><strong>UC San Diego Research Expo 2026</strong></a>.
+      Defended my Ph.D. thesis proposal and advanced to <strong>candidacy</strong>. Committee:
+      <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Prof. Siavash Mirarab</a>,
+      <a href="https://gymreklab.com/" target="_blank">Prof. Melissa Gymrek</a>, and Prof. Rob Knight.
+    </span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Apr 2026</span>
+    <span class="news-text">
+      Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a> poster at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2026</a>.
     </span>
   </div>
   <div class="news-item">
@@ -406,22 +353,28 @@
   <div class="news-item">
     <span class="news-date">Jun 2025</span>
     <span class="news-text">
-      Started research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank"><strong>AMD Research &amp; Advanced Development (RAD)</strong></a>, San Jose, CA.
+      Started research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research &amp; Advanced Development (RAD)</a>, San Jose, CA.
     </span>
   </div>
   <div class="news-item">
     <span class="news-date">May 2025</span>
     <span class="news-text">
       <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> published in
-      <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank"><strong>PNAS</strong></a>
+      <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank">PNAS</a>
       and selected as the <strong>journal cover</strong> (Vol. 122, No. 19). Featured in <a href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">UCSD Today</a>.
+    </span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Mar 2025</span>
+    <span class="news-text">
+      Served on Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>.
     </span>
   </div>
   <div class="news-item">
     <span class="news-date">Jul 2024</span>
     <span class="news-text">
       Presented talk on <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>
-      at <a href="https://www.iscb.org/ismb2024/home" target="_blank"><strong>ISMB 2024</strong></a>, Montreal, Canada.
+      at <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a>, Montreal, Canada.
     </span>
   </div>
   <div class="news-item">
@@ -435,31 +388,25 @@
     <span class="news-date">Apr 2024</span>
     <span class="news-text">
       Presented poster on <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>
-      at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank"><strong>UC San Diego Research Expo 2024</strong></a>.
-    </span>
-  </div>
-  <div class="news-item">
-    <span class="news-date">2025</span>
-    <span class="news-text">
-      Served on Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank"><strong>ISCA 2025</strong></a>.
+      at <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2024</a>.
     </span>
   </div>
   <div class="news-item">
     <span class="news-date">Mar 2024</span>
     <span class="news-text">
-      Served on Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank"><strong>ISCA 2024</strong></a>.
+      Served on Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.
     </span>
   </div>
   <div class="news-item">
     <span class="news-date">Sep 2023</span>
     <span class="news-text">
-      Completed 3-month summer internship at <a href="https://www.analog.com/" target="_blank"><strong>Analog Devices, Inc.</strong></a>, Wilmington, MA.
+      Completed 3-month summer internship at <a href="https://www.analog.com/" target="_blank">Analog Devices, Inc.</a>, Wilmington, MA.
     </span>
   </div>
   <div class="news-item">
     <span class="news-date">Nov 2022</span>
     <span class="news-text">
-      Joined <a href="https://turakhia.ucsd.edu/" target="_blank"><strong>Turakhia Lab</strong></a> as a PhD student at UC San Diego.
+      Joined <a href="https://turakhia.ucsd.edu/" target="_blank">Turakhia Lab</a> as a PhD student at UC San Diego.
     </span>
   </div>
 

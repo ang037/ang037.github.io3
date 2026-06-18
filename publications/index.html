@@ -5,7 +5,7 @@
   <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta | Publications</title>
-  <meta name="description" content="Publications — Anshu Gupta, PhD student at UC San Diego">
+  <meta name="description" content="Publications — Anshu Gupta, PhD Candidate at UC San Diego">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/all.min.css">
@@ -43,21 +43,21 @@
 
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
-    #progress::-webkit-progress-value { background: var(--accent); }
-    #progress::-moz-progress-bar { background: var(--accent); }
+    #progress::-webkit-progress-value { background: var(--border); }
+    #progress::-moz-progress-bar { background: var(--border); }
 
     .page-title { font-size: 1.9rem; font-weight: 700; color: var(--text); }
 
     .section-title {
       font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1.5px; color: var(--accent);
+      letter-spacing: 1.5px; color: var(--text-muted);
       border-bottom: 1px solid var(--border);
       padding-bottom: 6px; margin-bottom: 1.2rem; margin-top: 2.5rem;
     }
 
     /* Year label */
     .year-label {
-      font-size: 1.15rem; font-weight: 700; color: var(--accent);
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
       border-bottom: 2px solid var(--border); padding-bottom: 4px;
       margin-bottom: 1.2rem; margin-top: 2rem;
     }
@@ -74,8 +74,8 @@
       text-align: center; width: 100%; text-decoration: none;
     }
     .venue-pill:hover { text-decoration: none; opacity: 0.85; }
-    .pill-conf  { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent-border); }
-    .pill-jour  { background: var(--green-light);  color: var(--green);  border: 1px solid var(--green-border); }
+    .pill-conf  { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
+    .pill-jour  { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
 
     /* Pub content */
     .pub-content { flex: 1; }
@@ -83,7 +83,7 @@
     .pub-authors { font-size: 0.87rem; color: var(--entry-sub); margin-bottom: 3px; }
     .pub-authors em { font-style: normal; font-weight: 600; color: var(--text); }
     .pub-venue-line { font-size: 0.85rem; font-style: italic; color: var(--text-muted); margin-bottom: 6px; }
-    .pub-venue-line .hl { font-weight: 600; color: var(--green); font-style: normal; }
+    .pub-venue-line .hl { font-weight: 600; color: var(--text); font-style: normal; }
 
     /* Tags */
     .pub-tag {
@@ -93,15 +93,15 @@
     }
     .tag-abs    { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
     .tag-abs:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-    .tag-paper  { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent-border); }
-    .tag-paper:hover { opacity: 0.8; text-decoration: none; color: var(--accent); }
-    .tag-site   { background: var(--green-light); color: var(--green); border: 1px solid var(--green-border); }
-    .tag-site:hover { opacity: 0.8; text-decoration: none; color: var(--green); }
-    .tag-code   { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); }
-    .tag-code:hover { border-color: var(--accent); text-decoration: none; color: var(--text); }
+    .tag-paper  { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
+    .tag-paper:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .tag-site   { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
+    .tag-site:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .tag-code   { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
+    .tag-code:hover { border-color: var(--accent); text-decoration: none; color: var(--accent); }
 
     /* Abstract */
-    .abstract-box { background: var(--card-bg); border-left: 3px solid var(--accent); border-radius: 0 5px 5px 0; padding: 12px 14px; margin-top: 8px; font-size: 0.86rem; color: var(--entry-sub); line-height: 1.65; }
+    .abstract-box { background: var(--card-bg); border-left: 3px solid var(--border); border-radius: 0 5px 5px 0; padding: 12px 14px; margin-top: 8px; font-size: 0.86rem; color: var(--entry-sub); line-height: 1.65; }
 
     footer { text-align: center; padding: 22px; font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 50px; }
   </style>

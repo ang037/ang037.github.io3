@@ -5,7 +5,7 @@
   <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Anshu Gupta | Teaching</title>
-  <meta name="description" content="Teaching experience — Anshu Gupta, PhD student at UC San Diego">
+  <meta name="description" content="Teaching experience — Anshu Gupta, PhD Candidate at UC San Diego">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/all.min.css">
@@ -43,14 +43,14 @@
 
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
-    #progress::-webkit-progress-value { background: var(--accent); }
-    #progress::-moz-progress-bar { background: var(--accent); }
+    #progress::-webkit-progress-value { background: var(--border); }
+    #progress::-moz-progress-bar { background: var(--border); }
 
     .page-title { font-size: 1.9rem; font-weight: 700; color: var(--text); }
 
     .section-title {
       font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1.5px; color: var(--accent);
+      letter-spacing: 1.5px; color: var(--text-muted);
       border-bottom: 1px solid var(--border);
       padding-bottom: 6px; margin-bottom: 1.2rem; margin-top: 2.5rem;
     }
@@ -63,24 +63,24 @@
     .teach-header { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
     .teach-icon {
       width: 52px; height: 52px; flex-shrink: 0;
-      border-radius: 10px; background: var(--accent-light);
-      border: 1px solid var(--accent-border);
+      border-radius: 10px; background: var(--card-bg);
+      border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.35rem; color: var(--accent);
+      font-size: 1.35rem; color: var(--text-muted);
     }
-    .teach-icon.green { background: var(--green-light); border-color: var(--green-border); color: var(--green); }
-    .teach-icon.amber { background: var(--amber-light); border-color: var(--amber-border); color: var(--amber); }
+    .teach-icon.green { background: var(--card-bg); border-color: var(--border); color: var(--text-muted); }
+    .teach-icon.amber { background: var(--card-bg); border-color: var(--border); color: var(--text-muted); }
     .teach-info { flex: 1; }
     .teach-course { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
     .teach-role { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 4px; }
     .teach-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
     .teach-badge {
       font-size: 0.72rem; font-weight: 600; border-radius: 4px;
-      padding: 2px 9px; background: var(--accent-light);
-      color: var(--accent); border: 1px solid var(--accent-border);
+      padding: 2px 9px; background: var(--card-bg);
+      color: var(--text-muted); border: 1px solid var(--border);
     }
-    .teach-badge.green { background: var(--green-light); color: var(--green); border-color: var(--green-border); }
-    .teach-badge.amber { background: var(--amber-light); color: var(--amber); border-color: var(--amber-border); }
+    .teach-badge.green { background: var(--card-bg); color: var(--text-muted); border-color: var(--border); }
+    .teach-badge.amber { background: var(--card-bg); color: var(--text-muted); border-color: var(--border); }
 
     .teach-desc { font-size: 0.89rem; color: var(--entry-sub); line-height: 1.65; margin-top: 12px; }
     .teach-desc ul { padding-left: 1.15rem; margin: 4px 0 0; }
@@ -90,10 +90,10 @@
     .guest-item {
       display: flex; gap: 14px; align-items: flex-start;
       padding: 16px 18px; border-radius: 10px;
-      background: var(--amber-light); border: 1px solid var(--amber-border);
+      background: var(--card-bg); border: 1px solid var(--border);
       margin-bottom: 1.4rem;
     }
-    .guest-icon { font-size: 1.3rem; color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+    .guest-icon { font-size: 1.3rem; color: var(--text-muted); flex-shrink: 0; margin-top: 2px; }
     .guest-body { flex: 1; font-size: 0.9rem; color: var(--entry-text); line-height: 1.6; }
     .guest-body strong { color: var(--text); }
 
@@ -144,22 +144,21 @@
       <div class="teach-icon"><i class="fas fa-laptop-code"></i></div>
       <div class="teach-info">
         <div class="teach-course">CSE 8A — Introduction to Programming and Computational Problem Solving</div>
-        <div class="teach-role">Senior Teaching Assistant &nbsp;&middot;&nbsp; UC San Diego</div>
+        <div class="teach-role">Teaching Assistant &nbsp;&middot;&nbsp; UC San Diego</div>
         <div class="teach-meta">
           <span class="teach-badge">200+ Students</span>
-          <span class="teach-badge green">Senior TA</span>
           <span class="teach-badge">Instructor: Prof. Christine Alvarado</span>
         </div>
       </div>
     </div>
     <div class="teach-desc">
-      Served as a <strong>Senior TA</strong> for UCSD's introductory programming course, one of the largest
+      Served as a <strong>Teaching Assistant</strong> for UCSD's introductory programming course, one of the largest
       undergraduate courses in the department. The course introduces students to programming concepts and
       computational thinking using Python.
       <ul>
         <li>Independently taught the full class of <strong>200+ students</strong> when the instructor was unavailable — planned and delivered a complete lecture covering course material</li>
         <li>Led weekly discussion sections, held office hours, designed and graded assignments and exams</li>
-        <li>Mentored and coordinated with other TAs in the course as a senior TA</li>
+        <li>Mentored and coordinated with other TAs in the course.</li>
       </ul>
     </div>
   </div>
