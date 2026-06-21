@@ -82,9 +82,26 @@
     }
     .news-photo-col img {
       width: 100%; height: 100%; object-fit: cover;
-      display: block;
+      display: block; cursor: zoom-in;
     }
     .news-photo-col.hidden { display: none; }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.85);
+      align-items: center; justify-content: center;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+      max-width: 90vw; max-height: 85vh; border-radius: 6px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute; top: 18px; right: 24px;
+      font-size: 2rem; color: #fff; cursor: pointer; line-height: 1;
+      background: none; border: none;
+    }
 
     .news-content-col {
       flex: 1; padding: 16px 18px;
@@ -105,7 +122,6 @@
     .cat-intern { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
     .cat-service{ background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
 
-    .news-headline { font-size: 0.96rem; font-weight: 600; color: var(--text); margin-bottom: 5px; line-height: 1.4; }
     .news-body { font-size: 0.87rem; color: var(--entry-sub); line-height: 1.65; }
     .news-body a { color: var(--accent); }
 
@@ -165,7 +181,10 @@
   <div class="section-title">2026</div>
 
   <div class="news-card" data-cat="intern">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/thesis_proposal_2026.jpg" alt="Thesis Proposal"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Apr 2026</span>
@@ -180,7 +199,10 @@
   </div>
 
   <div class="news-card" data-cat="talk">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/DP-HLS_poster_presentation.JPG" alt="DP-HLS Research Expo 2026"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Apr 2026</span>
@@ -194,7 +216,7 @@
 
   <div class="news-card" data-cat="pub talk">
     <div class="news-photo-col">
-      <img src="/assets/img/dp_hls_logo.png" alt="DP-HLS"
+      <img src="/assets/img/HPCA_presentation.jpg" alt="DP-HLS"
            onerror="this.parentElement.classList.add('hidden')">
     </div>
     <div class="news-content-col">
@@ -213,7 +235,10 @@
   <div class="section-title">2025</div>
 
   <div class="news-card" data-cat="intern">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/amd_internship.jpeg" alt="AMD Research Internship"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Jun 2025</span>
@@ -226,7 +251,10 @@
   </div>
 
   <div class="news-card" data-cat="pub">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/PNAS_cover_image.png" alt="PNAS Cover May 2025"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">May 2025</span>
@@ -239,7 +267,10 @@
   </div>
 
   <div class="news-card" data-cat="service">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/isca_2025.jpg" alt="ISCA 2025"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Mar 2025</span>
@@ -303,7 +334,10 @@
   </div>
 
   <div class="news-card" data-cat="service">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/isca_2024.jpg" alt="ISCA 2024"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Mar 2024</span>
@@ -338,7 +372,10 @@
   <div class="section-title">2022</div>
 
   <div class="news-card" data-cat="intern">
-    <div class="news-photo-col hidden"></div>
+    <div class="news-photo-col">
+      <img src="/assets/img/turakhia_lab_2022.jpg" alt="Joined Turakhia Lab"
+           onerror="this.parentElement.classList.add('hidden')">
+    </div>
     <div class="news-content-col">
       <div class="news-top">
         <span class="news-date-pill">Nov 2022</span>
@@ -352,6 +389,11 @@
 
 </div><!-- /container -->
 
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <footer>&copy; 2026 Anshu Gupta</footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -363,6 +405,16 @@
   const saved=localStorage.getItem('ag-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
   setTheme(saved);
   btn.addEventListener('click',()=>setTheme(html.getAttribute('data-theme')==='dark'?'light':'dark'));
+
+  /* Lightbox — click a news photo to enlarge it */
+  const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightbox-img');
+  function closeLightbox(){lightbox.classList.remove('active');lightboxImg.src='';}
+  document.querySelectorAll('.news-photo-col img').forEach(img=>{
+    img.addEventListener('click',()=>{lightboxImg.src=img.src;lightboxImg.alt=img.alt;lightbox.classList.add('active');});
+  });
+  document.getElementById('lightbox-close').addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
 
   $(document).ready(function(){
     var navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);

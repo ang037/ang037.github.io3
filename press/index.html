@@ -55,14 +55,6 @@
       padding-bottom: 6px; margin-bottom: 1.4rem; margin-top: 2.5rem;
     }
 
-    /* Context highlight box */
-    .context-box {
-      background: var(--green-light); border: 1px solid var(--green-border);
-      border-radius: 10px; padding: 16px 20px; margin-bottom: 1.6rem;
-      font-size: 0.89rem; color: var(--entry-text); line-height: 1.7;
-    }
-    .context-box strong { color: var(--green); }
-
     /* Press card */
     .press-card {
       display: flex; gap: 0; border: 1px solid var(--border);
@@ -82,7 +74,6 @@
     .press-thumb .press-icon-fallback {
       font-size: 2rem; color: var(--text-muted);
     }
-    .press-thumb.hidden { display: none; }
 
     .press-body { flex: 1; padding: 16px 18px; }
     .press-source {
@@ -102,28 +93,8 @@
     }
     .press-read-link:hover { text-decoration: underline; }
 
-    /* PNAS special card */
-    .pnas-card {
-      display: flex; gap: 16px; border: 1px solid var(--green-border);
-      border-radius: 10px; padding: 16px 18px; margin-bottom: 1.2rem;
-      background: var(--green-light);
-    }
-    .pnas-cover {
-      width: 90px; height: 115px; flex-shrink: 0;
-      object-fit: cover; border-radius: 4px; border: 1px solid var(--green-border);
-    }
-    .pnas-placeholder {
-      width: 90px; height: 115px; flex-shrink: 0;
-      background: var(--green-light); border-radius: 4px; border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.68rem; color: var(--green); font-weight: 700; text-align: center; padding: 8px;
-    }
-    .pnas-text { flex: 1; font-size: 0.88rem; color: var(--entry-text); line-height: 1.65; }
-    .pnas-text strong { color: var(--green); }
-
     @media (max-width: 600px) {
       .press-thumb { width: 90px; }
-      .pnas-card { flex-direction: column; }
     }
 
     footer { text-align: center; padding: 22px; font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 50px; }

@@ -78,61 +78,29 @@
     .bio-text { font-size: 0.92rem; color: var(--entry-text); line-height: 1.78; }
     .bio-text p { margin-bottom: 0.85rem; }
 
-    /* ══ TOOL STATS ══ */
-    .tool-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem; }
-    .stat-chip {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 0.83rem; font-weight: 500;
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 6px; padding: 6px 13px;
-      color: var(--text); text-decoration: none; transition: border-color 0.15s;
+    /* Press cards — portrait tabs */
+    .press-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 14px;
     }
-    .stat-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
-    .stat-chip i { color: var(--text-muted); }
-    .stat-chip.conda i { color: var(--text-muted); }
-    .stat-chip.pnas i { color: var(--text-muted); }
-
-    /* PNAS cover block */
-    .pnas-block {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: var(--green-light); border: 1px solid var(--green-border);
-      border-radius: 8px; padding: 14px 16px; margin-bottom: 1rem;
+    .press-card {
+      display: flex; flex-direction: column; border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+      background: var(--card-bg); transition: box-shadow 0.15s;
+      text-decoration: none; color: inherit;
     }
-    .pnas-cover-img { width: 85px; height: 108px; object-fit: cover; border-radius: 4px; border: 1px solid var(--green-border); flex-shrink: 0; }
-    .pnas-placeholder {
-      width: 85px; height: 108px; background: var(--green-light);
-      border-radius: 4px; border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; font-size: 0.7rem; color: var(--green); font-weight: 600; text-align: center; padding: 6px;
+    .press-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-decoration: none; color: inherit; }
+    .press-thumb {
+      width: 100%; aspect-ratio: 3 / 4;
+      background: var(--border); display: flex; align-items: center;
+      justify-content: center; overflow: hidden; position: relative;
     }
-    .pnas-text { flex: 1; font-size: 0.88rem; color: var(--entry-text); line-height: 1.65; }
-    .pnas-text strong { color: var(--green); }
-    .pnas-text a { color: var(--green); }
-
-    /* Press chips */
-    .press-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.6rem; }
-    .press-chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 0.8rem; font-weight: 500;
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 5px; padding: 4px 11px; color: var(--text-muted);
-      text-decoration: none; transition: background 0.15s;
-    }
-    .press-chip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-
-    /* ══ AWARDS ══ */
-    .award-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.85rem; }
-    .award-icon { width: 30px; height: 30px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; color: var(--text-muted); margin-top: 1px; }
-    .award-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
-    .award-text strong { color: var(--text); }
-
-    /* ══ TALKS ══ */
-    .talk-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.9rem; }
-    .talk-badge { font-size: 0.7rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; margin-top: 3px; white-space: nowrap; flex-shrink: 0; }
-    .badge-talk   { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
-    .badge-poster { background: var(--card-bg); color: var(--text-muted); border: 1px solid var(--border); }
-    .talk-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
-    .talk-text strong { color: var(--text); }
+    .press-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .press-thumb .press-icon-fallback { font-size: 2.2rem; color: var(--text-muted); }
+    .press-body { padding: 12px 13px; }
+    .press-source { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+    .press-source-name { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); }
+    .press-headline { font-size: 0.86rem; font-weight: 600; color: var(--text); line-height: 1.4; }
 
     /* ══ SERVICE ══ */
     .service-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 0.7rem; }
@@ -140,16 +108,20 @@
     .service-text { font-size: 0.9rem; color: var(--entry-text); line-height: 1.55; }
 
     /* ══ COLLABORATIONS ══ */
-    .collab-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .collab-chip {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 0.83rem; font-weight: 500;
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: 6px; padding: 6px 13px; color: var(--text);
-      text-decoration: none; transition: border-color 0.15s;
+    .collab-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .collab-logo {
+      position: relative; overflow: hidden; display: flex;
+      align-items: center; justify-content: center;
+      width: 170px; height: 90px;
+      transition: transform 0.3s ease-in-out;
     }
-    .collab-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
-    .collab-chip i { color: var(--text-muted); font-size: 0.85rem; }
+    .collab-logo img {
+      max-width: 100%; max-height: 100%; width: auto; height: auto;
+      object-fit: contain; transition: transform 0.3s ease-in-out;
+    }
+    .collab-logo i { font-size: 2.4rem; color: var(--text-muted); }
+    .collab-logo:hover { transform: scale(1.05); }
+    .collab-logo:hover img { transform: scale(1.1); }
 
     /* ══ NEWS ══ */
     .news-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 0.85rem; }
@@ -220,30 +192,29 @@
       advised by <a href="https://turakhia.ucsd.edu/" target="_blank">Prof. Yatish Turakhia</a>.
     </p>
     <p>
-      My research bridges <strong>computer architecture</strong>, <strong>machine learning systems</strong>,
-      and <strong>computational biology</strong>, with the broader goal of making large-scale genomic analysis
-      fast, scalable, and accessible. I build hardware/software co-designed systems - that go from algorithm
-      design down to RTL and silicon — spanning FPGA-based accelerators for dynamic programming-based sequence
-      alignment to a fully automated, GPU/CPU-parallelized workflow for phylogenomic tree inference. These
-      tools are open-sourced and being used by research groups worldwide, with publications at leading venues (PNAS, HPCA).
+      My research stands at the unique intersection of <strong>computer architecture</strong>, <strong>hardware/software co-design</strong>,
+      and <strong>computational genomics</strong>, with the broader goal of making large-scale genomic analysis
+      fast, scalable, and accessible. I build tools that spans from FPGA-based accelerators for dynamic programming-based sequence
+      alignment to a fully automated, GPU/CPU-parallelized workflow for evolutionary tree inference. These
+      tools are open-sourced and being used by research groups worldwide, with publications at leading venues (PNAS, HPCA). 
     </p>
     <p>
       I collaborate with the <a href="https://vertebrategenomesproject.org/" target="_blank">Vertebrate Genomes Project (VGP)</a>
-      consortium, researchers at the <a href="https://scripps.ucsd.edu/" target="_blank">Scripps Institution of Oceanography, UCSD</a>,
+      consortium led by Genomics Institute at University of California Santa Cruz, researchers at the <a href="https://scripps.ucsd.edu/" target="_blank">Scripps Institution of Oceanography, UCSD</a>,
       and the <strong>AMD Omics Group</strong> on accelerating bioinformatics workloads at scale.
     </p>
     <p>
       Beyond research, I serve the community as a member of the Artifact Evaluation Committee
       for <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a> and
       <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>, as a reviewer for
-      <a href="https://academic.oup.com/bioinformatics" target="_blank"><em>Bioinformatics</em> (Oxford Academic)</a>,
+      <a href="https://academic.oup.com/bioinformatics" target="_blank"><em>Bioinformatics</em></a>, <a href="http://recomb.org/recomb2026/" target="_blank">RECOMB 2026</a> and <a href="https://academic.oup.com/mbe" target="_blank">MBE</a>, 
       and as co-organizer of the <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a>
       at <a href="https://www.asplos-conference.org/" target="_blank">ASPLOS 2024</a>.
     </p>
     <p>
       I received my M.S. in Computer Engineering from UC San Diego and my B.Tech. from
       <a href="https://www.iiests.ac.in/" target="_blank">IIEST Shibpur, India</a>. Before my PhD, I spent 3+ years as a Digital Design Engineer at
-      <a href="https://www.analog.com/" target="_blank">Analog Devices</a>. During my PhD, I interned at
+      <a href="https://www.analog.com/" target="_blank">Analog Devices</a>, gaining ASIC design and chip tape-out experience. During my PhD, I interned at
       <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research</a>.
       I was also a <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank">DAAD WISE Scholar</a>
       at the <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen, Germany</a>.
@@ -256,22 +227,68 @@
     <a href="/press/" style="font-size:0.75rem;font-weight:500;letter-spacing:0;text-transform:none;">Full coverage &rarr;</a>
   </div>
 
-  <div class="press-row">
-    <a class="press-chip" href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">
-      <i class="fas fa-newspaper"></i> UCSD Today
-    </a>
-    <a class="press-chip" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">
-      <i class="fas fa-flask"></i> PNAS Cover
-    </a>
-    <a class="press-chip" href="https://www.linkedin.com/posts/university-of-california-san-diego---jacobs-school-of-engineering_a-team-of-engineers-at-uc-san-diego-is-making-activity-7327801133756755968-lHRj?utm_source=share&utm_medium=member_desktop&rcm=ACoAABq5YR8BD6zHsK4iqsdH-hSfbiHpdPmgwfk" target="_blank">
-      <i class="fab fa-linkedin"></i> Jacobs School of Engineering
-    </a>
-    <a class="press-chip" href="https://scienmag.com/new-breakthrough-fully-automated-tool-revolutionizes-species-tree-inference/" target="_blank">
-      <i class="fas fa-microscope"></i> SciEnMag
-    </a>
-    <a class="press-chip" href="https://www.eurekalert.org/news-releases/1082752" target="_blank">
-      <i class="fas fa-bolt"></i> EurekAlert!
-    </a>
+  <div class="press-grid">
+  <a class="press-card" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">
+    <div class="press-thumb">
+      <img src="/assets/img/PNAS_cover_image.png" alt="PNAS Cover May 2025"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <i class="fas fa-book-open press-icon-fallback" style="display:none;"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">PNAS</span>
+      </div>
+      <div class="press-headline">Journal Cover — Vol. 122, No. 19</div>
+    </div>
+  </a>
+  <a class="press-card" href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">
+    <div class="press-thumb">
+      <img src="/assets/img/ucsd_logo.png" alt="UCSD Today"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <i class="fas fa-university press-icon-fallback" style="display:none;"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">UCSD Today</span>
+      </div>
+      <div class="press-headline">A Fully Automated Tool for Species Tree Inference</div>
+    </div>
+  </a>
+  <a class="press-card" href="https://www.linkedin.com/posts/university-of-california-san-diego---jacobs-school-of-engineering_a-team-of-engineers-at-uc-san-diego-is-making-activity-7327801133756755968-lHRj?utm_source=share&utm_medium=member_desktop&rcm=ACoAABq5YR8BD6zHsK4iqsdH-hSfbiHpdPmgwfk" target="_blank">
+    <div class="press-thumb">
+      <i class="fab fa-linkedin press-icon-fallback"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">Jacobs School of Engineering</span>
+      </div>
+      <div class="press-headline">A team of engineers at UC San Diego is making species tree inference fully automated</div>
+    </div>
+  </a>
+  <a class="press-card" href="https://scienmag.com/new-breakthrough-fully-automated-tool-revolutionizes-species-tree-inference/" target="_blank">
+    <div class="press-thumb">
+      <i class="fas fa-microscope press-icon-fallback"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">SciEnMag</span>
+      </div>
+      <div class="press-headline">New Breakthrough: Fully Automated Tool Revolutionizes Species Tree Inference</div>
+    </div>
+  </a>
+  <a class="press-card" href="https://www.eurekalert.org/news-releases/1082752" target="_blank">
+    <div class="press-thumb">
+      <img src="/assets/img/Eurekalert_news.png" alt="EurekAlert!"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <i class="fas fa-bolt press-icon-fallback" style="display:none;"></i>
+    </div>
+    <div class="press-body">
+      <div class="press-source">
+        <span class="press-source-name">EurekAlert!</span>
+      </div>
+      <div class="press-headline">Automated Tool Enables Species Tree Inference from Raw Genome Assemblies</div>
+    </div>
+  </a>
   </div>
 
   <!-- ══ SERVICE ══ -->
@@ -286,7 +303,7 @@
   <div class="service-item">
     <div class="service-dot"></div>
     <div class="service-text">
-      <strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank">Bioinformatics</a> (Oxford Academic), <a href="http://recomb.org/recomb2026/" target="_blank">RECOMB 2026</a>.
+      <strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank">Bioinformatics</a> (Oxford Academic), <a href="http://recomb.org/recomb2026/" target="_blank">RECOMB 2026 (Satellite Workshop)</a>.
     </div>
   </div>
   <div class="service-item">
@@ -299,21 +316,26 @@
 
   <!-- ══ COLLABORATIONS ══ -->
   <div class="section-title">Collaborations and Affiliations</div>
-  <div class="collab-grid">
-    <a class="collab-chip" href="https://vertebrategenomesproject.org/" target="_blank">
-      <i class="fas fa-dna"></i> Vertebrate Genomes Project (VGP)
+  <div class="collab-logos">
+    <a class="collab-logo" href="https://vertebrategenomesproject.org/" target="_blank" title="Vertebrate Genomes Project">
+      <img src="/assets/img/VGP_image.png" alt="Vertebrate Genomes Project" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-dna" style="display:none;"></i>
     </a>
-    <a class="collab-chip" href="https://scripps.ucsd.edu/" target="_blank">
-      <i class="fas fa-water"></i> Scripps Institution of Oceanography, UCSD
+    <a class="collab-logo" href="https://scripps.ucsd.edu/" target="_blank" title="Scripps Institution of Oceanography">
+      <img src="/assets/img/scripps_logo.png" alt="Scripps Institution of Oceanography" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-water" style="display:none;"></i>
     </a>
-    <a class="collab-chip" href="https://turakhia.ucsd.edu/" target="_blank">
-      <i class="fas fa-microchip"></i> Turakhia Lab, UCSD
+    <a class="collab-logo" href="https://turakhia.ucsd.edu/" target="_blank" title="Turakhia Lab, UCSD">
+      <img src="/assets/img/turakhia_lab.jpg" alt="Turakhia Lab, UCSD" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-microchip" style="display:none;"></i>
     </a>
-    <a class="collab-chip" href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">
-      <i class="fas fa-tree"></i> Mirarab Lab, UCSD
+    <a class="collab-logo" href="http://eceweb.ucsd.edu/~smirarab/" target="_blank" title="Mirarab Lab, UCSD">
+      <img src="/assets/img/ucsd_logo.png" alt="Mirarab Lab, UCSD" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-tree" style="display:none;"></i>
     </a>
-    <a class="collab-chip" href="https://www.amd.com/en/corporate/research.html" target="_blank">
-      <i class="fas fa-server"></i> AMD Omics Group
+    <a class="collab-logo" href="https://www.amd.com/en/corporate/research.html" target="_blank" title="AMD Omics Group">
+      <img src="/assets/img/AMD_logo.png" alt="AMD Omics Group" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-server" style="display:none;"></i>
     </a>
   </div>
 

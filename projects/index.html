@@ -74,8 +74,6 @@
     .proj-title a:hover { color: var(--accent); }
     .proj-meta { font-size: 0.79rem; color: var(--text-muted); margin-bottom: 5px; }
     .proj-desc { font-size: 0.89rem; color: var(--entry-sub); line-height: 1.62; margin-bottom: 7px; }
-    .proj-desc ul { padding-left: 1.15rem; margin: 4px 0 0; }
-    .proj-desc ul li { margin-bottom: 2px; }
 
     /* Tags */
     .proj-tag {
@@ -160,24 +158,26 @@
       </div>
       <div class="proj-meta">2025 – Present &nbsp;&middot;&nbsp; Phylogenomics / HPC / Algorithm Design</div>
       <div class="proj-desc">
-        A novel computational pipeline for species tree inference that <strong>combines Locus-of-Sequence (LoS)
-        and Whole Genome (WG) data</strong> in a principled manner. LoS datasets offer high taxon sampling across
-        tens of thousands of species but limited locus quality; WG data provides numerous high-quality loci but
-        narrower taxon coverage. MAGNET bridges both worlds.
-        <ul>
-          <li><strong>Accurate &amp; Interpretable</strong> — topology + branch lengths + phylogenetic uncertainty estimates</li>
-          <li><strong>Scalable</strong> — designed for tens of thousands of species using HPC parallelization</li>
-          <li><strong>Versatile</strong> — handles varying WG assembly quality (scaffold vs. chromosome-scale) and diverse LoS types (exons, UCEs)</li>
-          <li><strong>Expandable</strong> — incrementally incorporates new sequencing data without full de novo re-inference</li>
-          <li><strong>Broadly usable</strong> — largely automated with a user-friendly interface for non-experts</li>
-        </ul>
+        A novel computational pipeline for species tree inference that combines Locus-of-Sequence (LoS)
+        and Whole Genome (WG) data in a principled manner. LoS datasets offer high taxon sampling across
+        tens of thousands of species but limited locus quality, while WG data provides numerous high-quality
+        loci but narrower taxon coverage — MAGNET bridges both worlds, producing topology, branch lengths,
+        and phylogenetic uncertainty estimates that remain accurate and interpretable. The pipeline scales to
+        tens of thousands of species using HPC parallelization, handles varying WG assembly quality
+        (scaffold to chromosome-scale) and diverse LoS types (exons, UCEs), and can incrementally incorporate
+        new sequencing data without a full de novo re-inference. It is largely automated, with a
+        user-friendly interface aimed at non-experts.
       </div>
     </div>
   </div>
 
   <!-- ROADIES -->
   <div class="project-item">
-    <div class="proj-icon green"><i class="fas fa-dna"></i></div>
+    <div class="proj-icon green">
+      <img src="/assets/img/ROADIES_logo.png" alt="ROADIES logo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-dna" style="display:none;"></i>
+    </div>
     <div class="proj-body">
       <div class="proj-title">
         <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>
@@ -185,15 +185,15 @@
       </div>
       <div class="proj-meta">Jan 2023 – Present &nbsp;&middot;&nbsp; Evolutionary Genomics / HPC</div>
       <div class="proj-desc">
-        <strong>R</strong>eference free, <strong>O</strong>rthology free, <strong>A</strong>lignment free,
-        <strong>D</strong>iscordance aware <strong>E</strong>stimation of <strong>S</strong>pecies tree —
-        a fully automated, end-to-end HPC pipeline for inferring species trees directly from raw genome assemblies.
-        <ul>
-          <li>Achieved <strong>176× speedup</strong> in tree generation for large-scale genomics datasets</li>
-          <li>Published in <strong>PNAS 2025</strong>, featured on the journal cover; presented at <strong>ISMB 2024</strong></li>
-          <li>2K+ conda downloads, 43 GitHub stars; actively used by researchers worldwide</li>
-          <li>Collaborating with the <strong>Vertebrate Genomes Project (VGP)</strong> consortium and <strong>Scripps Institution of Oceanography</strong></li>
-        </ul>
+        Reference free, orthology free, alignment free, discordance aware estimation of species
+        tree — a fully automated, end-to-end HPC pipeline for inferring species trees directly from
+        raw genome assemblies. ROADIES achieves a 176× speedup in tree generation for large-scale
+        genomics datasets by removing the alignment and orthology-calling bottlenecks that limit
+        existing pipelines. The work was published in PNAS in 2025, selected as the issue's journal
+        cover, and presented at ISMB 2024. It is open-sourced and actively used by researchers
+        worldwide, with 2,000+ conda downloads and 43 GitHub stars to date, and underlies ongoing
+        collaborations with the Vertebrate Genomes Project (VGP) consortium and the Scripps
+        Institution of Oceanography.
       </div>
       <div class="stat-row">
         <a class="stat-chip" href="https://github.com/TurakhiaLab/ROADIES/stargazers" target="_blank">
@@ -202,7 +202,7 @@
         <a class="stat-chip" href="https://github.com/TurakhiaLab/ROADIES/network/members" target="_blank">
           <i class="fas fa-code-branch"></i> <span id="gh-forks">--</span>&nbsp;Forks
         </a>
-        <a class="stat-chip sc-green" href="https://anaconda.org/TurakhiaLab/roadies" target="_blank">
+        <a class="stat-chip sc-green" href="https://bioconda.github.io/recipes/roadies/README.html" target="_blank">
           <i class="fas fa-download"></i> 2K+&nbsp;Conda Downloads
         </a>
         <a class="stat-chip sc-amber" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">
@@ -212,7 +212,7 @@
       <a class="proj-tag tag-paper" href="https://doi.org/10.1073/pnas.2500553122" target="_blank"><i class="fas fa-file-alt fa-xs"></i> PNAS 2025</a>
       <a class="proj-tag tag-site"  href="https://turakhia.ucsd.edu/ROADIES/" target="_blank"><i class="fas fa-globe fa-xs"></i> Website</a>
       <a class="proj-tag tag-code" href="https://github.com/TurakhiaLab/ROADIES" target="_blank"><i class="fab fa-github fa-xs"></i> GitHub</a>
-      <a class="proj-tag tag-site" href="https://anaconda.org/TurakhiaLab/roadies" target="_blank"><i class="fas fa-box fa-xs"></i> Conda</a>
+      <a class="proj-tag tag-site" href="https://bioconda.github.io/recipes/roadies/README.html" target="_blank"><i class="fas fa-box fa-xs"></i> Conda</a>
     </div>
   </div>
 
@@ -228,7 +228,7 @@
       <div class="proj-desc">
         A GPU-accelerated and incremental extension of ROADIES for large-scale species tree placement.
         Rather than re-running full de novo inference when new genomes become available,
-        ROADIES-Placer <strong>places new taxa onto an existing species tree incrementally</strong> —
+        ROADIES-Placer places new taxa onto an existing species tree incrementally —
         significantly reducing compute time and enabling continuously updated phylogenies as sequencing
         data grows. GPU acceleration further speeds up the core alignment and tree estimation steps
         for massive datasets.
@@ -238,7 +238,11 @@
 
   <!-- DP-HLS -->
   <div class="project-item">
-    <div class="proj-icon"><i class="fas fa-microchip"></i></div>
+    <div class="proj-icon">
+      <img src="/assets/img/dp_hls_logo.png" alt="DP-HLS logo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+      <i class="fas fa-microchip" style="display:none;"></i>
+    </div>
     <div class="proj-body">
       <div class="proj-title">
         <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a>
@@ -247,12 +251,11 @@
       <div class="proj-meta">Nov 2022 – Jun 2024 &nbsp;&middot;&nbsp; FPGA Acceleration / Bioinformatics</div>
       <div class="proj-desc">
         An HLS-based open-source framework for creating FPGA accelerators for dynamic programming algorithms
-        in bioinformatics — covering sequence alignment, homology search, basecalling, and more.
-        <ul>
-          <li>Achieved <strong>32× speedup</strong> and <strong>20× faster development time</strong> than hand-coded HDL</li>
-          <li>15 diverse DP kernels implemented; compatible with AWS EC2 F1 FPGA instances</li>
-          <li>Published at <strong>IEEE HPCA 2026</strong>, Sydney, Australia</li>
-        </ul>
+        in bioinformatics, covering sequence alignment, homology search, basecalling, and more. DP-HLS
+        achieves a 32× speedup over CPU baselines and cuts implementation time by 20× compared to hand-coded
+        HDL, through parameterizable systolic array architectures that let algorithms be customized without
+        a hardware redesign. The framework includes 15 diverse DP kernels and is compatible with AWS EC2 F1
+        FPGA instances; the work was published at IEEE HPCA 2026 in Sydney, Australia.
       </div>
       <a class="proj-tag tag-paper" href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank"><i class="fas fa-file-alt fa-xs"></i> HPCA 2026</a>
       <a class="proj-tag tag-site"  href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank"><i class="fas fa-globe fa-xs"></i> Website</a>
@@ -270,11 +273,10 @@
       <div class="proj-title">Parallelized Genomic and HPC Algorithms</div>
       <div class="proj-meta">Jan 2023 – Mar 2024 &nbsp;&middot;&nbsp; C++, CUDA, Intel TBB, Git</div>
       <div class="proj-desc">
-        <ul>
-          <li>Parallelized Suffix Array construction on GPUs — <strong>86–571× speedup</strong> over optimized CPU baselines for genomic read mapping</li>
-          <li>Accelerated dense matrix multiplication using CUDA on NVIDIA K80/T4 GPUs; implemented Intel AVX2 vectorization</li>
-          <li>Optimized large-scale solvers (Aliev-Panfilov) on the <strong>Expanse Supercomputer</strong> using MPI and C++</li>
-        </ul>
+        Parallelized Suffix Array construction on GPUs, achieving an 86–571× speedup over optimized CPU
+        baselines for genomic read mapping. Also accelerated dense matrix multiplication using CUDA on
+        NVIDIA K80/T4 GPUs with Intel AVX2 vectorization, and optimized large-scale solvers (Aliev-Panfilov)
+        on the Expanse Supercomputer using MPI and C++.
       </div>
     </div>
   </div>
@@ -289,7 +291,7 @@
       <div class="proj-meta">Apr – Jun 2023 &nbsp;&middot;&nbsp; Vitis HLS, Vivado, Git, Python</div>
       <div class="proj-desc">
         Improved the <a href="https://fastmachinelearning.org/hls4ml/" target="_blank">HLS4ML library</a> for efficient ML
-        hardware inference via High-Level Synthesis. Partnered with <strong>CERN's HLS4ML team</strong> to implement
+        hardware inference via High-Level Synthesis. Partnered with CERN's HLS4ML team to implement
         feature enhancements and optimizations on the DL-to-FPGA flow.
       </div>
       <a class="proj-tag tag-code" href="https://github.com/fastmachinelearning/hls4ml" target="_blank"><i class="fab fa-github fa-xs"></i> GitHub</a>
