@@ -183,7 +183,7 @@
   <div class="news-card" data-cat="intern">
     <div class="news-photo-col">
       <img src="/assets/img/thesis_proposal_2026.jpg" alt="Thesis Proposal"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -201,7 +201,7 @@
   <div class="news-card" data-cat="talk">
     <div class="news-photo-col">
       <img src="/assets/img/DP-HLS_poster_presentation.JPG" alt="DP-HLS Research Expo 2026"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -217,7 +217,7 @@
   <div class="news-card" data-cat="pub talk">
     <div class="news-photo-col">
       <img src="/assets/img/HPCA_presentation.jpg" alt="DP-HLS"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -237,7 +237,7 @@
   <div class="news-card" data-cat="intern">
     <div class="news-photo-col">
       <img src="/assets/img/amd_internship.jpeg" alt="AMD Research Internship"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -252,8 +252,8 @@
 
   <div class="news-card" data-cat="pub">
     <div class="news-photo-col">
-      <img src="/assets/img/PNAS_cover_image.png" alt="PNAS Cover May 2025"
-           onerror="this.parentElement.classList.add('hidden')">
+      <img src="/assets/img/PNAS_cover_image.jpg" alt="PNAS Cover May 2025"
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -269,7 +269,7 @@
   <div class="news-card" data-cat="service">
     <div class="news-photo-col">
       <img src="/assets/img/isca_2025.jpg" alt="ISCA 2025"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -288,7 +288,7 @@
   <div class="news-card" data-cat="talk">
     <div class="news-photo-col">
       <img src="/assets/img/roadies_ismb.jpg" alt="ISMB 2024"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -304,7 +304,7 @@
   <div class="news-card" data-cat="award">
     <div class="news-photo-col">
       <img src="/assets/img/biosys_group_photo.jpg" alt="BioSys Workshop ASPLOS 2024"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -320,7 +320,7 @@
   <div class="news-card" data-cat="talk">
     <div class="news-photo-col">
       <img src="/assets/img/roadies_research_expo.jpeg" alt="Research Expo 2024"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -336,7 +336,7 @@
   <div class="news-card" data-cat="service">
     <div class="news-photo-col">
       <img src="/assets/img/isca_2024.jpg" alt="ISCA 2024"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -355,7 +355,7 @@
   <div class="news-card" data-cat="intern">
     <div class="news-photo-col">
       <img src="/assets/img/adi_internship.jpg" alt="Analog Devices Internship"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -374,7 +374,7 @@
   <div class="news-card" data-cat="intern">
     <div class="news-photo-col">
       <img src="/assets/img/turakhia_lab_2022.jpg" alt="Joined Turakhia Lab"
-           onerror="this.parentElement.classList.add('hidden')">
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
     </div>
     <div class="news-content-col">
       <div class="news-top">
@@ -391,7 +391,7 @@
 
 <div class="lightbox-overlay" id="lightbox">
   <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-  <img id="lightbox-img" src="" alt="">
+  <img id="lightbox-img" src="" alt="" loading="lazy" decoding="async">
 </div>
 
 <footer>&copy; 2026 Anshu Gupta</footer>
@@ -418,9 +418,8 @@
 
   $(document).ready(function(){
     var navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);
-    function upd(){var m=$(document).height()-$(window).height();$('#progress').attr({max:m,value:$(window).scrollTop()});}
-    upd();$(document).on('scroll',upd);
-    $(window).on('resize',function(){navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);upd();});
+    var maxScroll=0;function computeMax(){maxScroll=$(document).height()-$(window).height();}function upd(){$('#progress').attr({max:maxScroll,value:$(window).scrollTop()});}computeMax();upd();var scrollTicking=false;window.addEventListener('scroll',function(){if(!scrollTicking){requestAnimationFrame(function(){upd();scrollTicking=false;});scrollTicking=true;}},{passive:true});
+    $(window).on('resize',function(){navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);computeMax();upd();});
 
     /* Category filter — supports space-separated multi-category data-cat values */
     $('.filter-btn').on('click', function(){

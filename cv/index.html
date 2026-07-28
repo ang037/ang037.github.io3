@@ -402,9 +402,8 @@
 
   $(document).ready(function(){
     var navH=$('#navbar').outerHeight(true); $('body').css('padding-top',navH); $('#progress').css('top',navH);
-    function upd(){var m=$(document).height()-$(window).height();$('#progress').attr({max:m,value:$(window).scrollTop()});}
-    upd(); $(document).on('scroll',upd);
-    $(window).on('resize',function(){navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);upd();});
+    var maxScroll=0;function computeMax(){maxScroll=$(document).height()-$(window).height();}function upd(){$('#progress').attr({max:maxScroll,value:$(window).scrollTop()});}computeMax();upd();var scrollTicking=false;window.addEventListener('scroll',function(){if(!scrollTicking){requestAnimationFrame(function(){upd();scrollTicking=false;});scrollTicking=true;}},{passive:true});
+    $(window).on('resize',function(){navH=$('#navbar').outerHeight(true);$('body').css('padding-top',navH);$('#progress').css('top',navH);computeMax();upd();});
   });
 </script>
 </body>
