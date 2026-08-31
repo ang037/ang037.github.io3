@@ -1,0 +1,313 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+      #3 & #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumenewheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textbf{#2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Anshu Gupta} \\ \vspace{1pt}
+    % 123 Street Name, Town, State 12345 \\ 
+    \small \href{mailto:ang037@ucsd.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{ang037@ucsd.edu}} ~ 
+    \href{https://www.linkedin.com/in/guptaanshu26/}{\raisebox{-0.2\height}\faLinkedin\ \underline{guptaanshu26}}  ~
+    \href{https://ang037.github.io/}{\raisebox{-0.2\height}\faGithub\ \underline{ang037.github.io}}
+    \vspace{-8pt}
+\end{center}
+
+%--------SUMMARY---------------
+\section{Summary}
+
+
+\textbf{Ph.D. candidate in Computer Science and Engineering} at UC San Diego specializing in \textbf{High-Performance Computing (HPC) and hardware-software co-design} for large-scale bioinformatics and AI workloads. Led \textbf{ROADIES} (PNAS, journal cover; 176x speedup) and \textbf{DP-HLS} (HPCA 2026; 32x speedup) from concept to publication. Seeking research scientist/engineer roles applying hardware acceleration to ML and computational biology.
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego}{September 2022 -- Present}
+      {Ph.D. candidate in Computer Science and Engineering, (M.S. awarded, GPA: 4.0)}{La Jolla, CA}
+    % \resumeSubheading
+    %   {University of California San Diego}{September 2022 -- June 2024}
+    %   {Masters in Computer Science and Engineering; GPA - 4/4}{La Jolla, CA}
+    \resumeSubheading
+      {Indian Institute of Engineering Science and Technology, Shibpur}{July 2015 -- May 2019}
+      {B.Tech. in Electronics and Telecommunication Engineering; GPA - 9.55/10 (Rank: 4)}{West Bengal, India}
+      \resumeItemListStart
+        \resumeItem{DAAD WISE Scholar --- summer research internship, University of Bremen, Germany}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+
+ 
+% %------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+
+%-----------EXPERIENCE-----------
+
+\section{Relevant Publications [\href{https://scholar.google.com/citations?user=vRrKCdwAAAAJ&hl=en}{\textcolor{red}{\texttt{Google Scholar}}}]}
+\begin{itemize}[leftmargin=0.1in]
+    \item \textbf{A. Gupta}, Y. Cao, J. Liang, Y. Turakhia, “DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics" - accepted at HPCA 2026. [\href{https://arxiv.org/abs/2411.03398}{\textcolor{blue}{\texttt{arXiv}}}]
+    \item \textbf{A. Gupta}, S. Mirarab, Y. Turakhia, “Accurate, scalable, and fully automated inference of species trees from raw genome assemblies using ROADIES", Proc. Natl. Acad. Sci. U.S.A. 122 (19), e2500553122 (2025). [\href{https://doi.org/10.1073/pnas.2500553122}{\textcolor{blue}{\texttt{paper}}}]
+\end{itemize}
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {AMD Research and Advanced Development (RAD)}{June 2025 -- Sep 2025}
+      {Research Associate - PhD (Mentor: Stephen Neuendorffer)}{San Jose, California}
+      \resumeItemListStart
+        \resumeItem{Emulated sub-modules of an advanced AI test chip on cutting-edge FPGA platform, contributing to the hardware and software bring-up of custom silicon.}
+        \resumeItem{Conducted runtime performance characterization of AI models on the target test-chip architecture.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Analog Devices, Inc.}{June 2023 -- Sep 2023}
+      {ASIC BU Digital Design Intern}{Wilmington, Massachusetts}
+      \resumeItemListStart
+        \resumeItem{Conducted hardware architectural benchmarking for Cadence Tensilica Xtensa configurable processors.}
+        \resumeItem{Characterized performance, power, and area metrics for low-power embedded processor configurations.}
+
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Analog Devices India Pvt. Ltd.}{July 2019 -- July 2022}
+      {Digital Design Engineer}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Optimized embedded signal processing kernels using SIMD operations and architecture-specific vectorization, reducing DSP cycle count by 33\%.}
+        \resumeItem{Contributed to the digital front-end design and tape-out of a low-power Battery Management SoC.}
+        \resumeItem{Evaluated ARM Cortex-M processor architecture and SRAM/ROM architecture's power, performance, and area trade-offs for low-power embedded SoCs.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+\section{Research Experience (Mentor: Yatish Turakhia)}
+
+
+  \resumeSubHeadingListStart
+    \resumenewheading
+      {ML Hardware Acceleration}{May 2025 -- Ongoing}
+      \resumeItemListStart
+        \resumeItem{Designing \textbf{hardware-aware weight compression techniques} to significantly optimize and accelerate Deep Learning inference on specialized hardware.} 
+        \resumeItem{Research focused on maximizing computational efficiency and reducing memory footprint for deploying large-scale neural networks at the edge.}
+      \resumeItemListEnd
+      \resumenewheading
+      {ROADIES (Automated Species Tree Inference Tool for Genomic Datasets)}{Jan 2023 -- Ongoing}
+    \resumeItemListStart
+        \resumeItem{\textbf{Led the development of \href{https://turakhia.ucsd.edu/ROADIES/}{\textcolor{blue}{\texttt{ROADIES}}}}, a reference-free, highly parallelized HPC tool for evolutionary genomics using \textbf{GPU/CPU co-processing and parallelization primitives}.}
+        \resumeItem{Achieved \textbf{176x speedup} in tree generation for large-scale genomics dataset, reducing computational cost.}
+        \resumeItem{Published in PNAS, featured on the \href{https://www.pnas.org/toc/pnas/122/19}{\textcolor{blue}{\texttt{Journal Cover.}}}}
+        \resumeItem{Presented at \textbf{Intelligent Systems for Molecular Biology (ISMB) 2024} conference.}
+      \resumeItemListEnd
+
+    \resumenewheading
+      {DP-HLS (FPGA Acceleration Framework)}{Nov 2022 -- June 2024}
+      \resumeItemListStart
+        \resumeItem{\textbf{Developed DP-HLS}, an HLS-based framework, that achieved a \textbf{32x speedup} and \textbf{20x faster implementation time} for accelerating dynamic programming algorithms for bioinformatics workloads.}
+        \resumeItem{Designed the framework for easy customization of algorithms without hardware redesign, using highly parameterizable systolic array architectures.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+  %%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0in,label={}]
+
+    \item{
+     \textbf{GPU \& HPC Acceleration}: CUDA, MPI, OpenMP, Intel TBB, Slurm, Amazon AWS, Snakemake, Conda, Bash \\
+     \textbf{AI/ML \& Software}: Python, C/C++, HLS, R \\
+     \textbf{Hardware \& Co-Design}: ASIC/Custom Silicon Design Flow, FPGA (AMD/Xilinx Vitis HLS/Vivado), Verilog, SystemVerilog \\
+     }
+     \end{itemize}
+ \vspace{-16pt}
+
+% -----------LEADERSHIP & SERVICE-----------
+\section{Leadership \& Service}
+ \resumeItemListStart
+    \resumeItem{\textbf{Artifact Evaluation Committee}: ISCA 2025, ISCA 2024 \quad $|$ \quad \textbf{Reviewer}: \emph{Bioinformatics} (Oxford Academic) \quad $|$ \quad \textbf{Workshop Co-organizer}: BioSys Workshop @ ASPLOS 2024, San Diego, CA}
+ \resumeItemListEnd
+
+% -----------PROJECTS-----------
+\section{Other Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Parallelized Genomic and HPC Algorithms} $|$ \emph{C++, CUDA, Intel TBB, Git}}{Jan 2023 -- March 2024}
+          \resumeItemListStart
+            \resumeItem{Executed high-performance parallelization of Suffix Array construction on GPUs, achieving $86-571x$ speedup over optimized CPU baselines for genomic read mapping.}
+            \resumeItem{Accelerated dense matrix multiplication using CUDA on NVIDIA K80/T4 GPUs and implemented Intel AVX2 vectorization for high-throughput computing}
+            \resumeItem{Optimized computation on the Expanse Supercomputer by applying MPI and C++ parallelization to challenging solvers (e.g., Aliev-Panfilov)}
+          \resumeItemListEnd
+             \vspace{-13pt}
+        \resumeProjectHeading
+              {\textbf{Optimization of HLS4ML Library} $|$ \emph{Vitis HLS, Vivado, Git, Python}}{April 2023 -- June 2023}
+          \resumeItemListStart
+            \resumeItem{Improved the HLS4ML library to achieve efficient ML hardware inference via High-Level Synthesis, focusing directly on the DL-to-FPGA flow.}
+            \resumeItem{Partnered with CERN's HLS4ML team to implement feature enhancements and optimizations.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{2}
+            \begin{itemize}[itemsep=-1pt, parsep=3pt]
+                \item Principles of Computer Architecture
+                \item Parallel Computer Architecture
+                \item Parallel Computation
+                \item Parallel Computation in Bioinformatics
+                \item Design Automation and Prototyping
+                \item Validation and Testing in Embedded Systems
+                \item Algorithms in Computational Biology
+                \item Computational Evolutionary Biology
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+\end{document}

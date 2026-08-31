@@ -41,6 +41,9 @@
     .theme-btn { background: none; border: 1px solid var(--border); border-radius: 20px; padding: 4px 10px; cursor: pointer; color: var(--text-muted); font-size: 0.85rem; transition: all 0.2s; line-height: 1; }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+    .navbar-toggler { border-color: var(--border); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
     #progress::-webkit-progress-value { background: var(--border); }
@@ -106,7 +109,7 @@
   <div class="container" style="max-width:960px;">
     <a class="navbar-brand" href="/"><span>Anshu</span> Gupta</a>
     <div class="d-flex align-items-center ml-auto order-md-last">
-      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode">
+      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
         <i id="theme-icon" class="fas fa-moon"></i>
       </button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -117,9 +120,9 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="/research/">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
         <li class="nav-item"><a class="nav-link" href="/teaching/">Teaching</a></li>
         <li class="nav-item"><a class="nav-link" href="/news/">News</a></li>
         <li class="nav-item"><a class="nav-link active" href="/press/">Press</a></li>
@@ -141,7 +144,7 @@
   <!-- PNAS Cover -->
   <div class="press-card">
     <div class="press-thumb">
-      <img src="/assets/img/pnas_cover.jpg" alt="PNAS Cover May 2025"
+      <img src="/assets/img/PNAS_cover_image.jpg" alt="PNAS Cover May 2025"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" loading="lazy" decoding="async">
       <i class="fas fa-book-open press-icon-fallback" style="display:none;"></i>
     </div>
@@ -154,7 +157,7 @@
       <div class="press-excerpt">
         ROADIES was selected as the cover article, reflecting the editorial board's assessment of the paper's significance and broad scientific impact.
       </div>
-      <a class="press-read-link" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">
+      <a class="press-read-link" href="https://www.pnas.org/toc/pnas/122/19" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-external-link-alt"></i> View issue cover
       </a>
     </div>
@@ -178,7 +181,7 @@
         democratizes phylogenomics by removing the need for expert manual intervention in species tree
         inference from raw genome assemblies.
       </div>
-      <a class="press-read-link" href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">
+      <a class="press-read-link" href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-external-link-alt"></i> Read full article
       </a>
     </div>
@@ -200,7 +203,7 @@
         The Jacobs School of Engineering at UC San Diego featured the ROADIES work in an official post,
         reaching thousands of followers in the engineering and academic community.
       </div>
-      <a class="press-read-link" href="https://www.linkedin.com/posts/university-of-california-san-diego---jacobs-school-of-engineering_a-team-of-engineers-at-uc-san-diego-is-making-activity-7327801133756755968-lHRj?utm_source=share&utm_medium=member_desktop&rcm=ACoAABq5YR8BD6zHsK4iqsdH-hSfbiHpdPmgwfk" target="_blank">
+      <a class="press-read-link" href="https://www.linkedin.com/posts/university-of-california-san-diego---jacobs-school-of-engineering_a-team-of-engineers-at-uc-san-diego-is-making-activity-7327801133756755968-lHRj?utm_source=share&utm_medium=member_desktop&rcm=ACoAABq5YR8BD6zHsK4iqsdH-hSfbiHpdPmgwfk" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-external-link-alt"></i> View post
       </a>
     </div>
@@ -223,7 +226,7 @@
         removes longstanding barriers in evolutionary genomics that previously required manual
         expert curation.
       </div>
-      <a class="press-read-link" href="https://scienmag.com/new-breakthrough-fully-automated-tool-revolutionizes-species-tree-inference/" target="_blank">
+      <a class="press-read-link" href="https://scienmag.com/new-breakthrough-fully-automated-tool-revolutionizes-species-tree-inference/" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-external-link-alt"></i> Read full article
       </a>
     </div>
@@ -245,7 +248,7 @@
         EurekAlert!, operated by the American Association for the Advancement of Science (AAAS),
         distributed a press release on ROADIES — a platform used by thousands of science journalists worldwide.
       </div>
-      <a class="press-read-link" href="https://www.eurekalert.org/news-releases/1082752" target="_blank">
+      <a class="press-read-link" href="https://www.eurekalert.org/news-releases/1082752" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-external-link-alt"></i> Read press release
       </a>
     </div>

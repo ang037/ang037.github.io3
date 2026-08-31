@@ -46,6 +46,9 @@
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
 
     /* ══ PROGRESS BAR ══ */
+    .navbar-toggler { border-color: var(--border); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
     #progress::-webkit-progress-value { background: var(--border); }
@@ -107,7 +110,7 @@
   <div class="container" style="max-width:960px;">
     <a class="navbar-brand" href="/"><span>Anshu</span> Gupta</a>
     <div class="d-flex align-items-center ml-auto order-md-last">
-      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode">
+      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
         <i id="theme-icon" class="fas fa-moon"></i>
       </button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -118,9 +121,9 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-        <li class="nav-item"><a class="nav-link active" href="/cv/">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="/research/">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/cv/">CV</a></li>
         <li class="nav-item"><a class="nav-link" href="/teaching/">Teaching</a></li>
         <li class="nav-item"><a class="nav-link" href="/news/">News</a></li>
         <li class="nav-item"><a class="nav-link" href="/press/">Press</a></li>
@@ -135,9 +138,9 @@
   <div class="d-flex align-items-start justify-content-between pt-3 mb-1 flex-wrap" style="gap:10px;">
     <div>
       <h1 class="page-title">Curriculum Vitae</h1>
-      <p style="font-size:0.83rem; color:var(--text-muted); margin:2px 0 0;">Last updated: Apr 2026</p>
+      <p style="font-size:0.83rem; color:var(--text-muted); margin:2px 0 0;">Last updated: Aug 2026</p>
     </div>
-    <a class="cv-download mt-1" href="/cv/Anshu_Gupta_Resume_2026.pdf" target="_blank">
+    <a class="cv-download mt-1" href="/cv/Anshu_Gupta_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">
       <i class="fas fa-file-pdf"></i> Download PDF
     </a>
   </div>
@@ -145,9 +148,11 @@
   <!-- SUMMARY -->
   <div class="section-title">Summary</div>
   <p style="font-size:0.92rem; color:var(--entry-text); line-height:1.75; margin-bottom:0;">
-    4th-year Ph.D. candidate in Computer Science and Engineering with expertise in <strong>High-Performance Computing (HPC)</strong>
-    and <strong>hardware-software co-design</strong> for solving large-scale computational challenges in bioinformatics
-    and AI. Highly proficient in Python, C/C++, and Verilog.
+    PhD candidate in Computer Science and Engineering specializing in <strong>high-performance computing</strong>,
+    <strong>hardware&ndash;software co-design</strong>, and accelerator systems for genomics and AI workloads.
+    Experience spans GPU/CPU-parallel software, FPGA/HLS accelerator design, performance characterization,
+    and more than three years of ASIC/SoC development, including chip tape-out. Author of research published
+    in PNAS and HPCA.
   </p>
 
   <!-- EDUCATION -->
@@ -159,15 +164,15 @@
       <h6>University of California San Diego — La Jolla, CA</h6>
       <div class="cv-sub">Ph.D. in Computer Science and Engineering &nbsp;(M.S. awarded, GPA: 4.0)</div>
       <ul>
-        <li>Advised by <a href="https://turakhia.ucsd.edu/" target="_blank">Prof. Yatish Turakhia</a>
+        <li>Advised by <a href="https://turakhia.ucsd.edu/" target="_blank" rel="noopener noreferrer">Prof. Yatish Turakhia</a>
 </li>
         <li>Research exam: <em>Accurate, scalable, and fully automated inference of species trees from raw genomic assemblies using ROADIES</em></li>
-        <li>Research exam committee: <a href="https://cseweb.ucsd.edu/~dasgupta/" target="_blank">Prof. Sanjoy Dasgupta</a>,
-            <a href="https://pharmacy.ucsd.edu/faculty/bandeira" target="_blank">Prof. Nuno Bandeira</a>,
-            <a href="https://gymreklab.com/" target="_blank">Prof. Melissa Gymrek</a></li>
+        <li>Research exam committee: <a href="https://cseweb.ucsd.edu/~dasgupta/" target="_blank" rel="noopener noreferrer">Prof. Sanjoy Dasgupta</a>,
+            <a href="https://pharmacy.ucsd.edu/faculty/bandeira" target="_blank" rel="noopener noreferrer">Prof. Nuno Bandeira</a>,
+            <a href="https://gymreklab.com/" target="_blank" rel="noopener noreferrer">Prof. Melissa Gymrek</a></li>
         <li>Thesis proposal defended Apr 2026; advanced to <strong>Ph.D. candidacy</strong></li>
-        <li>Thesis proposal committee: <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Prof. Siavash Mirarab</a>,
-            <a href="https://gymreklab.com/" target="_blank">Prof. Melissa Gymrek</a>,
+        <li>Thesis proposal committee: <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank" rel="noopener noreferrer">Prof. Siavash Mirarab</a>,
+            <a href="https://gymreklab.com/" target="_blank" rel="noopener noreferrer">Prof. Melissa Gymrek</a>,
             Prof. Rob Knight</li>
       </ul>
     </div>
@@ -180,16 +185,16 @@
       <div class="cv-sub">B.Tech. in Electronics and Telecommunication Engineering</div>
       <ul>
         <li>GPA: 9.55 / 10 &nbsp;&middot;&nbsp; Class Rank: 4 of 78</li>
-        <li>Advised by <a href="https://www.iiests.ac.in/IIEST/Faculty/telecom-ankita" target="_blank">Prof. Ankita Pramanik</a></li>
-        <li>Recipient of the <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank">DAAD WISE Scholarship</a>
-            — summer research internship at the <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen, Germany</a></li>
+        <li>Advised by <a href="https://www.iiests.ac.in/IIEST/Faculty/telecom-ankita" target="_blank" rel="noopener noreferrer">Prof. Ankita Pramanik</a></li>
+        <li>Recipient of the <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50015295" target="_blank" rel="noopener noreferrer">DAAD WISE Scholarship</a>
+            — summer research internship at the <a href="https://www.uni-bremen.de/en/" target="_blank" rel="noopener noreferrer">University of Bremen, Germany</a></li>
       </ul>
     </div>
   </div>
 
   <!-- PUBLICATIONS -->
   <div class="section-title">Publications
-    <a href="https://scholar.google.com/citations?user=vRrKCdwAAAAJ&hl=en" target="_blank"
+    <a href="https://scholar.google.com/citations?user=vRrKCdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"
        style="font-size:0.72rem; font-weight:400; text-transform:none; letter-spacing:0; margin-left:8px; color:var(--accent);">[Google Scholar]</a>
   </div>
 
@@ -197,28 +202,28 @@
     <span class="pub-title-sm">DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics.</span><br>
     A. Gupta*, Y. Cao*, J. Liang, Y. Turakhia.
     <span class="pub-venue-sm">IEEE HPCA 2026, Sydney, Australia.</span>
-    [<a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">paper</a>]
+    [<a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank" rel="noopener noreferrer">paper</a>]
   </div>
 
   <div class="pub-compact">
     <span class="pub-title-sm">Accurate, scalable, and fully automated inference of species trees from raw genome assemblies using ROADIES.</span><br>
     A. Gupta, S. Mirarab, Y. Turakhia.
     <span class="pub-venue-sm">Proc. Natl. Acad. Sci. U.S.A. 122(19), e2500553122 (2025). <strong style="color:var(--green);">Featured on journal cover.</strong></span>
-    [<a href="https://doi.org/10.1073/pnas.2500553122" target="_blank">paper</a>]
+    [<a href="https://doi.org/10.1073/pnas.2500553122" target="_blank" rel="noopener noreferrer">paper</a>]
   </div>
 
   <div class="pub-compact">
     <span class="pub-title-sm">Organ Detection in Surgical Videos Using Neural Networks.</span><br>
     A. Kumar, A. Gupta, A. Pramanik.
     <span class="pub-venue-sm">SmartCom 2020.</span>
-    [<a href="https://link.springer.com/chapter/10.1007/978-981-15-5224-3_34" target="_blank">paper</a>]
+    [<a href="https://link.springer.com/chapter/10.1007/978-981-15-5224-3_34" target="_blank" rel="noopener noreferrer">paper</a>]
   </div>
 
   <div class="pub-compact">
     <span class="pub-title-sm">T-depth Optimization for Fault-Tolerant Quantum Circuits.</span><br>
     P. Niemann, A. Gupta, R. Drechsler.
     <span class="pub-venue-sm">IEEE ISMVL 2019.</span>
-    [<a href="https://ieeexplore.ieee.org/document/8758745" target="_blank">paper</a>]
+    [<a href="https://ieeexplore.ieee.org/document/8758745" target="_blank" rel="noopener noreferrer">paper</a>]
   </div>
 
   <!-- WORK EXPERIENCE -->
@@ -227,7 +232,7 @@
   <div class="cv-entry">
     <div class="cv-date">Jun – Sep 2025</div>
     <div class="cv-body">
-      <h6><a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research &amp; Advanced Development (RAD)</a> — San Jose, CA</h6>
+      <h6><a href="https://www.amd.com/en/corporate/research.html" target="_blank" rel="noopener noreferrer">AMD Research &amp; Advanced Development (RAD)</a> — San Jose, CA</h6>
       <div class="cv-sub">Research Associate – PhD &nbsp;&middot;&nbsp; Mentor: Stephen Neuendorffer</div>
       <ul>
         <li>Emulated sub-modules of an advanced AI test chip on cutting-edge FPGA platform, contributing to hardware and software bring-up of custom silicon.</li>
@@ -239,7 +244,7 @@
   <div class="cv-entry">
     <div class="cv-date">Jun – Sep 2023</div>
     <div class="cv-body">
-      <h6><a href="https://www.analog.com/" target="_blank">Analog Devices, Inc.</a> — Wilmington, MA</h6>
+      <h6><a href="https://www.analog.com/" target="_blank" rel="noopener noreferrer">Analog Devices, Inc.</a> — Wilmington, MA</h6>
       <div class="cv-sub">ASIC BU Digital Design Intern</div>
       <ul>
         <li>Conducted hardware architectural benchmarking for Cadence Tensilica Xtensa configurable processors.</li>
@@ -251,7 +256,7 @@
   <div class="cv-entry">
     <div class="cv-date">Jul 2019 – Jul 2022</div>
     <div class="cv-body">
-      <h6><a href="https://www.analog.com/" target="_blank">Analog Devices India Pvt. Ltd.</a> — Bengaluru, India</h6>
+      <h6><a href="https://www.analog.com/" target="_blank" rel="noopener noreferrer">Analog Devices India Pvt. Ltd.</a> — Bengaluru, India</h6>
       <div class="cv-sub">Digital Design Engineer</div>
       <ul>
         <li>Optimized embedded signal processing kernels using SIMD operations and architecture-specific vectorization, reducing DSP cycle count by 33%.</li>
@@ -264,7 +269,7 @@
   <!-- RESEARCH EXPERIENCE -->
   <div class="section-title">Research Experience
     <span style="font-size:0.72rem; font-weight:400; text-transform:none; letter-spacing:0; color:var(--text-muted); margin-left:6px;">
-      Mentor: <a href="https://turakhia.ucsd.edu/" target="_blank">Prof. Yatish Turakhia</a>
+      Mentor: <a href="https://turakhia.ucsd.edu/" target="_blank" rel="noopener noreferrer">Prof. Yatish Turakhia</a>
     </span>
   </div>
 
@@ -273,7 +278,7 @@
     <div class="cv-body">
       <h6>ML Hardware Acceleration</h6>
       <ul>
-        <li>Designing <strong>hardware-aware weight compression techniques</strong> to optimize and accelerate Deep Learning inference on specialized hardware.</li>
+        <li>Designing <strong>hardware-aware weight compression techniques</strong> to optimize and accelerate deep learning inference on specialized hardware.</li>
         <li>Focused on maximizing computational efficiency and reducing memory footprint for deploying large-scale neural networks at the edge.</li>
       </ul>
     </div>
@@ -284,10 +289,10 @@
     <div class="cv-body">
       <h6>ROADIES — Automated Species Tree Inference Tool</h6>
       <ul>
-        <li>Led the development of <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a>, a reference-free, highly parallelized HPC tool for evolutionary genomics using GPU/CPU co-processing.</li>
-        <li>Achieved <strong>176× speedup</strong> in tree generation for large-scale genomics datasets.</li>
+        <li>Led the development of <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank" rel="noopener noreferrer">ROADIES</a>, a reference-free, GPU/CPU-parallelized HPC tool for evolutionary genomics.</li>
+        <li>Produces species trees comparable in quality to state-of-the-art approaches in substantially less time.</li>
         <li>Published in <strong>PNAS 2025</strong>, featured on the journal cover. Presented at <strong>ISMB 2024</strong>.</li>
-        <li>Actively used by researchers globally; 2K+ conda downloads, 43 GitHub stars.</li>
+        <li>Used by researchers beyond our group; 2K+ conda downloads, 43 GitHub stars.</li>
       </ul>
     </div>
   </div>
@@ -297,7 +302,7 @@
     <div class="cv-body">
       <h6>DP-HLS — FPGA Acceleration Framework</h6>
       <ul>
-        <li>Developed <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a>, an HLS-based framework achieving <strong>32× speedup</strong> and <strong>20× faster implementation time</strong> for bioinformatics DP algorithms.</li>
+        <li>Co-developed <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank" rel="noopener noreferrer">DP-HLS</a>, an HLS-based framework achieving <strong>1.3–32× improved throughput</strong> over GPU/CPU baselines and <strong>~20× faster implementation time</strong> for bioinformatics dynamic-programming algorithms.</li>
         <li>Designed parameterizable systolic array architectures for easy algorithm customization without hardware redesign.</li>
         <li>Published at <strong>IEEE HPCA 2026</strong>, Sydney, Australia.</li>
       </ul>
@@ -309,19 +314,15 @@
 
   <div class="service-item">
     <div class="service-dot"></div>
-    <div class="service-text"><strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>.</div>
+    <div class="service-text"><strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2025/" target="_blank" rel="noopener noreferrer">ISCA 2025</a>, <a href="https://iscaconf.org/isca2024/" target="_blank" rel="noopener noreferrer">ISCA 2024</a>.</div>
   </div>
   <div class="service-item">
     <div class="service-dot"></div>
-    <div class="service-text"><strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank">Bioinformatics</a> (Oxford Academic).</div>
+    <div class="service-text"><strong>Reviewer</strong>, <a href="https://academic.oup.com/bioinformatics" target="_blank" rel="noopener noreferrer">Bioinformatics</a> (Oxford Academic), <a href="http://recomb.org/recomb2026/" target="_blank" rel="noopener noreferrer">RECOMB 2026 (Satellite Workshop)</a>, <a href="https://academic.oup.com/mbe" target="_blank" rel="noopener noreferrer">MBE</a>.</div>
   </div>
   <div class="service-item">
     <div class="service-dot"></div>
-    <div class="service-text"><strong>Workshop Co-organizer</strong>, <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a> @ <a href="https://www.asplos-conference.org/" target="_blank">ASPLOS 2024</a>, San Diego, CA.</div>
-  </div>
-  <div class="service-item">
-    <div class="service-dot"></div>
-    <div class="service-text"><strong>Artifact Evaluation Committee</strong>, <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.</div>
+    <div class="service-text"><strong>Workshop Co-organizer</strong>, <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank" rel="noopener noreferrer">BioSys Workshop</a> @ <a href="https://www.asplos-conference.org/" target="_blank" rel="noopener noreferrer">ASPLOS 2024</a>, San Diego, CA.</div>
   </div>
 
   <!-- TECHNICAL SKILLS -->
@@ -332,12 +333,12 @@
       <td>CUDA, MPI, OpenMP, Intel TBB, Slurm, Amazon AWS, Snakemake, Conda, Bash</td>
     </tr>
     <tr>
-      <td>AI/ML &amp; Software</td>
-      <td>Python, C/C++, HLS, R</td>
+      <td>Programming</td>
+      <td>Python, C/C++, R</td>
     </tr>
     <tr>
       <td>Hardware &amp; Co-Design</td>
-      <td>ASIC/Custom Silicon Design Flow, FPGA (AMD/Xilinx Vitis HLS/Vivado), Verilog, SystemVerilog</td>
+      <td>ASIC/Custom Silicon Design Flow, FPGA (AMD/Xilinx), High-Level Synthesis (HLS, Vitis HLS), Vivado, Verilog, SystemVerilog</td>
     </tr>
   </table>
 

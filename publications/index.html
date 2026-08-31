@@ -40,6 +40,8 @@
     .nav-link.active { font-weight: 600; }
     .theme-btn { background: none; border: 1px solid var(--border); border-radius: 20px; padding: 4px 10px; cursor: pointer; color: var(--text-muted); font-size: 0.85rem; transition: all 0.2s; line-height: 1; }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .navbar-toggler { border-color: var(--border); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
@@ -105,7 +107,7 @@
   <div class="container" style="max-width:960px;">
     <a class="navbar-brand" href="/"><span>Anshu</span> Gupta</a>
     <div class="d-flex align-items-center ml-auto order-md-last">
-      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode">
+      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
         <i id="theme-icon" class="fas fa-moon"></i>
       </button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -116,9 +118,9 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="/research/">Research</a></li>
         <li class="nav-item"><a class="nav-link active" href="/publications/">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
         <li class="nav-item"><a class="nav-link" href="/teaching/">Teaching</a></li>
         <li class="nav-item"><a class="nav-link" href="/news/">News</a></li>
         <li class="nav-item"><a class="nav-link" href="/press/">Press</a></li>
@@ -134,7 +136,7 @@
     <h1 class="page-title">Publications</h1>
     <p style="font-size:0.87rem; color:var(--text-muted); margin:0;">
       * equal contribution. &nbsp;
-      <a href="https://scholar.google.com/citations?user=vRrKCdwAAAAJ&hl=en" target="_blank">
+      <a href="https://scholar.google.com/citations?user=vRrKCdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
         <i class="ai ai-google-scholar"></i> Google Scholar
       </a>
     </p>
@@ -144,21 +146,18 @@
   <div class="year-label">2026</div>
   <div class="pub-row">
     <div class="venue-badge">
-      <a class="venue-pill pill-conf" href="https://hpca-conf.org/2026/" target="_blank">HPCA<br>2026</a>
+      <a class="venue-pill pill-conf" href="https://hpca-conf.org/2026/" target="_blank" rel="noopener noreferrer">HPCA<br>2026</a>
     </div>
     <div class="pub-content">
       <div class="pub-title">DP-HLS: A High-Level Synthesis Framework for Accelerating Dynamic Programming Algorithms in Bioinformatics</div>
-      <div class="pub-authors"><em>Anshu Gupta</em>*, Yingqi Cao*, Jason Liang, and <a href="https://turakhia.ucsd.edu/" target="_blank">Yatish Turakhia</a></div>
+      <div class="pub-authors"><em>Anshu Gupta</em>*, Yingqi Cao*, Jason Liang, and <a href="https://turakhia.ucsd.edu/" target="_blank" rel="noopener noreferrer">Yatish Turakhia</a></div>
       <div class="pub-venue-line">
         IEEE International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Sydney, Australia, Feb 2026.
-        <span style="color:var(--text-muted); font-size:0.82rem;">
-          &nbsp;— One of the top-4 computer architecture conferences (alongside ISCA, MICRO, ASPLOS);
-        </span>
       </div>
       <a class="pub-tag tag-abs" data-toggle="collapse" href="#abs-dphls" role="button">Abstract</a>
-      <a class="pub-tag tag-paper" href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">Paper</a>
-      <a class="pub-tag tag-site" href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">Website</a>
-      <a class="pub-tag tag-code" href="https://github.com/TurakhiaLab/DP-HLS" target="_blank">GitHub</a>
+      <a class="pub-tag tag-paper" href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank" rel="noopener noreferrer">Paper</a>
+      <a class="pub-tag tag-site" href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank" rel="noopener noreferrer">Website</a>
+      <a class="pub-tag tag-code" href="https://github.com/TurakhiaLab/DP-HLS" target="_blank" rel="noopener noreferrer">GitHub</a>
       <div class="collapse" id="abs-dphls">
         <div class="abstract-box">
           Dynamic programming (DP) based algorithms are essential yet compute-intensive parts of numerous bioinformatics pipelines. This paper introduces DP-HLS, a novel framework based on High-Level Synthesis (HLS) that simplifies and accelerates the development of a broad set of bioinformatically relevant DP algorithms in hardware. DP-HLS features an easy-to-use template with integrated HLS directives, enabling efficient hardware solutions without requiring hardware design knowledge. We implemented 15 diverse DP kernels, achieving 1.3–32× improved throughput over state-of-the-art GPU and CPU baselines.
@@ -171,22 +170,19 @@
   <div class="year-label">2025</div>
   <div class="pub-row">
     <div class="venue-badge">
-      <a class="venue-pill pill-jour" href="https://www.pnas.org/toc/pnas/122/19" target="_blank">PNAS</a>
+      <a class="venue-pill pill-jour" href="https://www.pnas.org/toc/pnas/122/19" target="_blank" rel="noopener noreferrer">PNAS</a>
     </div>
     <div class="pub-content">
       <div class="pub-title">Accurate, scalable, and fully automated inference of species trees from raw genome assemblies using ROADIES</div>
-      <div class="pub-authors"><em>Anshu Gupta</em>, <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Siavash Mirarab</a>, and <a href="https://turakhia.ucsd.edu/" target="_blank">Yatish Turakhia</a></div>
+      <div class="pub-authors"><em>Anshu Gupta</em>, <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank" rel="noopener noreferrer">Siavash Mirarab</a>, and <a href="https://turakhia.ucsd.edu/" target="_blank" rel="noopener noreferrer">Yatish Turakhia</a></div>
       <div class="pub-venue-line">
         <span class="hl">Proceedings of the National Academy of Sciences (PNAS)</span>,
         122(19), e2500553122, 2025. <span class="hl">Featured on the journal cover.</span>
-        <span style="color:var(--text-muted); font-size:0.82rem;">
-          &nbsp;— ~15% acceptance rate; one of the most-cited scientific journal globally.
-        </span>
       </div>
       <a class="pub-tag tag-abs" data-toggle="collapse" href="#abs-roadies" role="button">Abstract</a>
-      <a class="pub-tag tag-paper" href="https://doi.org/10.1073/pnas.2500553122" target="_blank">Paper</a>
-      <a class="pub-tag tag-site" href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">Website</a>
-      <a class="pub-tag tag-code" href="https://github.com/turakhia-lab/ROADIES" target="_blank">GitHub</a>
+      <a class="pub-tag tag-paper" href="https://doi.org/10.1073/pnas.2500553122" target="_blank" rel="noopener noreferrer">Paper</a>
+      <a class="pub-tag tag-site" href="https://turakhia.ucsd.edu/ROADIES/" target="_blank" rel="noopener noreferrer">Website</a>
+      <a class="pub-tag tag-code" href="https://github.com/turakhia-lab/ROADIES" target="_blank" rel="noopener noreferrer">GitHub</a>
       <div class="collapse" id="abs-roadies">
         <div class="abstract-box">
           Inference of species trees plays a crucial role in advancing our understanding of evolutionary relationships. We present ROADIES, a novel pipeline for species tree inference from raw genome assemblies that is fully automated, easy to use, scalable, free from reference bias, and provides flexibility to adjust the tradeoff between accuracy and runtime. Using genomic datasets from large-scale sequencing consortia across three diverse life forms (placental mammals, pomace flies, and birds), we show that ROADIES infers species trees comparable in quality to state-of-the-art approaches but in a fraction of the time.
@@ -199,14 +195,14 @@
   <div class="year-label">2020</div>
   <div class="pub-row">
     <div class="venue-badge">
-      <a class="venue-pill pill-conf" href="https://link.springer.com/book/10.1007/978-981-15-5224-3" target="_blank">Smart<br>Com</a>
+      <a class="venue-pill pill-conf" href="https://link.springer.com/book/10.1007/978-981-15-5224-3" target="_blank" rel="noopener noreferrer">Smart<br>Com</a>
     </div>
     <div class="pub-content">
       <div class="pub-title">Organ Detection in Surgical Videos Using Neural Networks</div>
-      <div class="pub-authors">Amit Kumar, <em>Anshu Gupta</em>, and <a href="https://www.iiests.ac.in/IIEST/Faculty/telecom-ankita" target="_blank">Ankita Pramanik</a></div>
+      <div class="pub-authors">Amit Kumar, <em>Anshu Gupta</em>, and <a href="https://www.iiests.ac.in/IIEST/Faculty/telecom-ankita" target="_blank" rel="noopener noreferrer">Ankita Pramanik</a></div>
       <div class="pub-venue-line">Smart Trends in Computing and Communications: Proceedings of SmartCom 2020.</div>
       <a class="pub-tag tag-abs" data-toggle="collapse" href="#abs-surgical" role="button">Abstract</a>
-      <a class="pub-tag tag-paper" href="https://link.springer.com/chapter/10.1007/978-981-15-5224-3_34" target="_blank">Paper</a>
+      <a class="pub-tag tag-paper" href="https://link.springer.com/chapter/10.1007/978-981-15-5224-3_34" target="_blank" rel="noopener noreferrer">Paper</a>
       <div class="collapse" id="abs-surgical">
         <div class="abstract-box">
           The automatic surgical video processing for anomaly detection is becoming important since manual feedback from surgeons is subject to errors and time-consuming. In this paper, a convolutional neural network (CNN) is designed to evaluate laparoscopic and endoscopic surgical videos. The neural network will detect and localize the organs for the given videos, laying the path for automatic post-surgical processing.
@@ -219,14 +215,14 @@
   <div class="year-label">2019</div>
   <div class="pub-row">
     <div class="venue-badge">
-      <a class="venue-pill pill-conf" href="https://ieeexplore.ieee.org/xpl/conhome/8752095/proceeding" target="_blank">IEEE<br>ISMVL</a>
+      <a class="venue-pill pill-conf" href="https://ieeexplore.ieee.org/xpl/conhome/8752095/proceeding" target="_blank" rel="noopener noreferrer">IEEE<br>ISMVL</a>
     </div>
     <div class="pub-content">
       <div class="pub-title">T-depth Optimization for Fault-Tolerant Quantum Circuits</div>
-      <div class="pub-authors"><a href="https://dblp.org/pid/131/6907-1.html" target="_blank">Philipp Niemann</a>, <em>Anshu Gupta</em>, and <a href="https://www.rolfdrechsler.de/" target="_blank">Rolf Drechsler</a></div>
+      <div class="pub-authors"><a href="https://dblp.org/pid/131/6907-1.html" target="_blank" rel="noopener noreferrer">Philipp Niemann</a>, <em>Anshu Gupta</em>, and <a href="https://www.rolfdrechsler.de/" target="_blank" rel="noopener noreferrer">Rolf Drechsler</a></div>
       <div class="pub-venue-line">IEEE 49th International Symposium on Multiple-Valued Logic (ISMVL), 2019.</div>
       <a class="pub-tag tag-abs" data-toggle="collapse" href="#abs-quantum" role="button">Abstract</a>
-      <a class="pub-tag tag-paper" href="https://ieeexplore.ieee.org/document/8758745" target="_blank">Paper</a>
+      <a class="pub-tag tag-paper" href="https://ieeexplore.ieee.org/document/8758745" target="_blank" rel="noopener noreferrer">Paper</a>
       <div class="collapse" id="abs-quantum">
         <div class="abstract-box">
           The Clifford+T gate library consisting of Hadamard, T, and CNOT gates has attracted much interest in quantum circuit synthesis. Since fault-tolerant implementations of the T gate have very high latency, recent work aims at minimizing the T-depth. We present an approach to exploit additional ancilla qubits in the mapping of reversible circuits into Clifford+T quantum circuits with the primary objective to minimize the T-depth.

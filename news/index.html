@@ -43,6 +43,9 @@
     .theme-btn { background: none; border: 1px solid var(--border); border-radius: 20px; padding: 4px 10px; cursor: pointer; color: var(--text-muted); font-size: 0.85rem; transition: all 0.2s; line-height: 1; }
     .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+    .navbar-toggler { border-color: var(--border); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
     #progress { position: fixed; top: 56px; left: 0; width: 100%; height: 3px; appearance: none; border: none; background: transparent; z-index: 1100; }
     #progress::-webkit-progress-bar { background: transparent; }
     #progress::-webkit-progress-value { background: var(--border); }
@@ -138,7 +141,7 @@
   <div class="container" style="max-width:960px;">
     <a class="navbar-brand" href="/"><span>Anshu</span> Gupta</a>
     <div class="d-flex align-items-center ml-auto order-md-last">
-      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode">
+      <button id="theme-toggle" class="theme-btn mr-2" title="Toggle dark/light mode" aria-label="Toggle dark/light mode">
         <i id="theme-icon" class="fas fa-moon"></i>
       </button>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -149,9 +152,9 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="/research/">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cv/">CV</a></li>
         <li class="nav-item"><a class="nav-link" href="/teaching/">Teaching</a></li>
         <li class="nav-item"><a class="nav-link active" href="/news/">News</a></li>
         <li class="nav-item"><a class="nav-link" href="/press/">Press</a></li>
@@ -192,8 +195,8 @@
       </div>
       <div class="news-body">
         Defended my Ph.D. thesis proposal and advanced to candidacy. Committee:
-        <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank">Prof. Siavash Mirarab</a>,
-        <a href="https://gymreklab.com/" target="_blank">Prof. Melissa Gymrek</a>, and Prof. Rob Knight.
+        <a href="http://eceweb.ucsd.edu/~smirarab/" target="_blank" rel="noopener noreferrer">Prof. Siavash Mirarab</a>,
+        <a href="https://gymreklab.com/" target="_blank" rel="noopener noreferrer">Prof. Melissa Gymrek</a>, and Prof. Rob Knight.
       </div>
     </div>
   </div>
@@ -209,7 +212,23 @@
         <span class="cat-badge cat-talk">Poster</span>
       </div>
       <div class="news-body">
-        Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank">DP-HLS</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2026</a>.
+        Presented <a href="https://turakhia.ucsd.edu/DP-HLS/" target="_blank" rel="noopener noreferrer">DP-HLS</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank" rel="noopener noreferrer">UC San Diego Research Expo 2026</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="news-card" data-cat="talk">
+    <div class="news-photo-col">
+      <img src="/assets/img/ece218_guest_lecture.jpg" alt="ECE 218 Guest Lecture"
+           onerror="this.parentElement.classList.add('hidden')" loading="lazy" decoding="async">
+    </div>
+    <div class="news-content-col">
+      <div class="news-top">
+        <span class="news-date-pill">Mar 2026</span>
+        <span class="cat-badge cat-talk">Lecture</span>
+      </div>
+      <div class="news-body">
+        Delivered a guest lecture for <strong>ECE 218</strong> at UC San Diego.
       </div>
     </div>
   </div>
@@ -226,7 +245,7 @@
         <span class="cat-badge cat-pub">Publication</span>
       </div>
       <div class="news-body">
-        Presented and published <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank">DP-HLS</a> at <a href="https://hpca-conf.org/2026/" target="_blank">IEEE HPCA 2026</a>, Sydney, Australia.
+        Presented and published <a href="https://ieeexplore.ieee.org/abstract/document/11408544" target="_blank" rel="noopener noreferrer">DP-HLS</a> at <a href="https://hpca-conf.org/2026/" target="_blank" rel="noopener noreferrer">IEEE HPCA 2026</a>, Sydney, Australia.
       </div>
     </div>
   </div>
@@ -245,7 +264,7 @@
         <span class="cat-badge cat-intern">Internship</span>
       </div>
       <div class="news-body">
-        Started research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank">AMD Research &amp; Advanced Development</a>, San Jose, CA.
+        Started research internship at <a href="https://www.amd.com/en/corporate/research.html" target="_blank" rel="noopener noreferrer">AMD Research &amp; Advanced Development</a>, San Jose, CA.
       </div>
     </div>
   </div>
@@ -261,7 +280,7 @@
         <span class="cat-badge cat-pub">Publication</span>
       </div>
       <div class="news-body">
-        <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> published in <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank">PNAS</a> (Vol. 122, No. 19) and selected as the journal cover; covered by <a href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank">UCSD Today</a> and multiple science outlets.
+        <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank" rel="noopener noreferrer">ROADIES</a> published in <a href="https://www.pnas.org/toc/pnas/122/19" target="_blank" rel="noopener noreferrer">PNAS</a> (Vol. 122, No. 19) and selected as the journal cover; covered by <a href="https://today.ucsd.edu/story/a-fully-automated-tool-for-species-tree-inference" target="_blank" rel="noopener noreferrer">UCSD Today</a> and multiple science outlets.
       </div>
     </div>
   </div>
@@ -277,7 +296,7 @@
         <span class="cat-badge cat-service">Service</span>
       </div>
       <div class="news-body">
-        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank">ISCA 2025</a>.
+        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2025/" target="_blank" rel="noopener noreferrer">ISCA 2025</a>.
       </div>
     </div>
   </div>
@@ -296,7 +315,7 @@
         <span class="cat-badge cat-talk">Talk</span>
       </div>
       <div class="news-body">
-        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> at <a href="https://www.iscb.org/ismb2024/home" target="_blank">ISMB 2024</a>, Montreal, Canada.
+        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank" rel="noopener noreferrer">ROADIES</a> at <a href="https://www.iscb.org/ismb2024/home" target="_blank" rel="noopener noreferrer">ISMB 2024</a>, Montreal, Canada.
       </div>
     </div>
   </div>
@@ -312,7 +331,7 @@
         <span class="cat-badge cat-award">Award</span>
       </div>
       <div class="news-body">
-        Received ASPLOS 2024 Travel Grant and co-organized the inaugural <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank">BioSys Workshop</a> at ASPLOS 2024, San Diego.
+        Received ASPLOS 2024 Travel Grant and co-organized the inaugural <a href="https://biosys-workshop.github.io/dist/index.html" target="_blank" rel="noopener noreferrer">BioSys Workshop</a> at ASPLOS 2024, San Diego.
       </div>
     </div>
   </div>
@@ -328,7 +347,7 @@
         <span class="cat-badge cat-talk">Poster</span>
       </div>
       <div class="news-body">
-        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank">ROADIES</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank">UC San Diego Research Expo 2024</a>.
+        Presented <a href="https://turakhia.ucsd.edu/ROADIES/" target="_blank" rel="noopener noreferrer">ROADIES</a> poster at the <a href="https://jacobsschool.ucsd.edu/research-expo" target="_blank" rel="noopener noreferrer">UC San Diego Research Expo 2024</a>.
       </div>
     </div>
   </div>
@@ -344,7 +363,7 @@
         <span class="cat-badge cat-service">Service</span>
       </div>
       <div class="news-body">
-        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank">ISCA 2024</a>.
+        Served on the Artifact Evaluation Committee for <a href="https://iscaconf.org/isca2024/" target="_blank" rel="noopener noreferrer">ISCA 2024</a>.
       </div>
     </div>
   </div>
@@ -363,7 +382,7 @@
         <span class="cat-badge cat-intern">Internship</span>
       </div>
       <div class="news-body">
-        Completed summer internship at <a href="https://www.analog.com/" target="_blank">Analog Devices, Inc.</a>, Wilmington, MA.
+        Completed summer internship at <a href="https://www.analog.com/" target="_blank" rel="noopener noreferrer">Analog Devices, Inc.</a>, Wilmington, MA.
       </div>
     </div>
   </div>
@@ -382,7 +401,7 @@
         <span class="cat-badge cat-intern">Milestone</span>
       </div>
       <div class="news-body">
-        Joined <a href="https://turakhia.ucsd.edu/" target="_blank">Turakhia Lab</a> as a PhD student at UC San Diego.
+        Joined <a href="https://turakhia.ucsd.edu/" target="_blank" rel="noopener noreferrer">Turakhia Lab</a> as a PhD student at UC San Diego.
       </div>
     </div>
   </div>
